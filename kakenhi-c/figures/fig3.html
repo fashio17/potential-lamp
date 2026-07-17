@@ -1,0 +1,84 @@
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:"IPAPGothic","IPAGothic",sans-serif; background:#fff; width:1400px; padding:26px 34px 20px; color:#1f2937; }
+  h1 { font-size:26px; text-align:center; margin-bottom:8px; }
+  .sub { text-align:center; font-size:17px; color:#374151; margin-bottom:20px; }
+  table.design { border-collapse:collapse; margin:0 auto; }
+  table.design th, table.design td { border:2.5px solid #475569; padding:14px 22px; text-align:center; }
+  table.design .corner { border:none; }
+  table.design .colhead { background:#33527d; color:#fff; font-size:18px; line-height:1.45; width:360px; }
+  table.design .rowhead { background:#33527d; color:#fff; font-size:18px; line-height:1.45; width:250px; }
+  table.design td.cell { background:#eef3fa; font-size:18px; line-height:1.5; }
+  table.design td.cell b { font-size:19px; color:#1e3a8a; }
+  table.design td.cell .n { font-size:15.5px; color:#4b5563; }
+  table.design td.ctrl { background:#f3f4f6; }
+  .factor-x { text-align:center; font-size:16px; color:#4b5563; margin:6px 0 2px; }
+  .tl { margin-top:30px; }
+  .tl h2 { font-size:19px; margin-bottom:14px; color:#1e3a8a; }
+  .steps { display:flex; align-items:stretch; justify-content:center; }
+  .step { border:2.5px solid #475569; border-radius:9px; background:#fff; width:266px; padding:12px 12px; text-align:center; }
+  .step .t { font-weight:bold; font-size:18px; color:#1e3a8a; margin-bottom:5px; }
+  .step .d { font-size:15px; color:#374151; line-height:1.5; }
+  .step.iv { background:#eef3fa; border-color:#33527d; border-width:3px; }
+  .sa { display:flex; align-items:center; padding:0 4px; }
+  .note { margin:26px auto 0; width:1180px; border:2px solid #8199bd; background:#eef3fa; border-radius:8px; padding:11px 18px; font-size:16.5px; line-height:1.6; }
+  .note b { color:#1e3a8a; }
+</style>
+<body>
+<h1>図3　教育モジュール×AI支援の2×2要因計画と3時点測定</h1>
+<div class="sub">対象：日本の大学生 N=240（4群・各群約60名、無作為割付）　※7カ国比較データベースの知見に基づき教材を設計</div>
+
+<table class="design">
+  <tr>
+    <td class="corner"></td>
+    <th class="colhead" colspan="2">要因2：AI支援</th>
+  </tr>
+  <tr>
+    <td class="corner"></td>
+    <th class="colhead" style="background:#4a6a99">生成AIによる選択支援</th>
+    <th class="colhead" style="background:#4a6a99">従来型ワークシート</th>
+  </tr>
+  <tr>
+    <th class="rowhead">要因1：教育モジュール<br>実施</th>
+    <td class="cell"><b>第1群：教育＋AI支援</b><br><span class="n">n≒60</span></td>
+    <td class="cell"><b>第2群：教育＋ワークシート</b><br><span class="n">n≒60</span></td>
+  </tr>
+  <tr>
+    <th class="rowhead">待機統制<br>（研究終了後に教育提供）</th>
+    <td class="cell ctrl"><b>第3群：AI支援のみ</b><br><span class="n">n≒60</span></td>
+    <td class="cell ctrl"><b>第4群：統制群</b><br><span class="n">n≒60</span></td>
+  </tr>
+</table>
+
+<div class="tl">
+  <h2>■ 測定スケジュール（3時点）</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="t">事前測定（T1）</div>
+      <div class="d">介入前ベースライン<br>全指標を測定</div>
+    </div>
+    <div class="sa"><svg width="30" height="36"><polygon points="3,10 17,10 17,3 28,18 17,33 17,26 3,26" fill="#33527d"/></svg></div>
+    <div class="step iv">
+      <div class="t">介入期間</div>
+      <div class="d">教育モジュール（複数回）<br>×　AI支援／ワークシート<br>による装いの意思決定実践</div>
+    </div>
+    <div class="sa"><svg width="30" height="36"><polygon points="3,10 17,10 17,3 28,18 17,33 17,26 3,26" fill="#33527d"/></svg></div>
+    <div class="step">
+      <div class="t">事後測定（T2）</div>
+      <div class="d">介入直後の効果を測定</div>
+    </div>
+    <div class="sa"><svg width="30" height="36"><polygon points="3,10 17,10 17,3 28,18 17,33 17,26 3,26" fill="#33527d"/></svg></div>
+    <div class="step">
+      <div class="t">フォローアップ（T3）</div>
+      <div class="d">1か月後<br>効果の持続性を測定</div>
+    </div>
+  </div>
+</div>
+
+<div class="note">
+<b>測定指標</b>：FPS（装い由来の心理的安定感）／装いの自律性／WDQI（ワードローブ意思決定の質）／自己効力感／購買後悔<br>
+<b>分析</b>：混合効果モデルにより、教育・AI支援の主効果、<b>教育×AIの交互作用</b>、および効果の持続性（T1→T2→T3）を検証。<br>
+<b>倫理的配慮</b>：AI条件では個人を特定する画像・属性を入力せず、標準化した指示・選択肢を使用。待機統制群には研究終了後に同一の教育を提供。
+</div>
+</body>
