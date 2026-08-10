@@ -106,19 +106,26 @@ function coverSingle(p) {
   });
 
   s.addText("パーソナルスタイリスト／イメージコンサルタントの方へ", {
-    x: M, y: 1.85, w: 7.9, h: 0.42,
+    x: M, y: 1.8, w: 7.9, h: 0.42,
     fontFace: BODY, fontSize: 15, color: ROSE_LT, margin: 0, valign: "middle",
   });
   s.addText("資格を取ったのに、\nなぜ選ばれないのか", {
-    x: M, y: 2.35, w: 7.9, h: 1.9,
+    x: M, y: 2.28, w: 7.9, h: 1.85,
     fontFace: HEAD, fontSize: 42, bold: true, color: WHITE, margin: 0, valign: "middle", lineSpacing: 64,
   });
-  s.addText("選ばれている人が、整えている7つ", {
-    x: M, y: 4.4, w: 7.9, h: 0.5,
-    fontFace: BODY, fontSize: 17, color: GREIGE, margin: 0, valign: "middle",
+  s.addShape(p.ShapeType.roundRect, {
+    x: M, y: 4.3, w: 7.4, h: 0.62, rectRadius: 0.1, fill: { color: PLUM_DK },
   });
-  s.addText("えりりん　／　ファッション心理学者・大学教授　　|　　約22分", {
-    x: M, y: 5.5, w: 7.9, h: 0.4,
+  s.addText("ファッション心理学　×　AI　で解きます", {
+    x: M + 0.35, y: 4.3, w: 7.0, h: 0.62,
+    fontFace: BODY, fontSize: 16, bold: true, color: ROSE_LT, charSpacing: 1, margin: 0, valign: "middle",
+  });
+  s.addText("AI実演つき　／　選ばれている人が整えている7つ", {
+    x: M, y: 5.05, w: 7.9, h: 0.45,
+    fontFace: BODY, fontSize: 15, color: GREIGE, margin: 0, valign: "middle",
+  });
+  s.addText("えりりん　／　ファッション心理学者・大学教授　　|　　約23分", {
+    x: M, y: 5.7, w: 7.9, h: 0.4,
     fontFace: BODY, fontSize: 12.5, color: MUTED, charSpacing: 1, margin: 0, valign: "middle",
   });
 
@@ -128,11 +135,11 @@ function coverSingle(p) {
 
 /** 1本版の目次（離脱防止） */
 function agendaSingle(p) {
-  const s = contentSlide(p, "", "今日お話しするのは、3つです", "22分、お付き合いください");
+  const s = contentSlide(p, "", "今日お話しするのは、3つです", "23分、お付き合いください");
   const items = [
     ["なぜ、選ばれないのか", "資格を取ったのに、という状態の正体"],
-    ["お客様が変わらない、本当の理由", "たぶん、聞いたことがない話です"],
-    ["選ばれている人が、整えている7つ", "自分の現在地が分かるチェックつき"],
+    ["ファッション心理学から見た、本当の理由", "たぶん、聞いたことがない話です"],
+    ["AIで、今日から変えられること", "実演します。そして、整えるべき7つ"],
   ];
   items.forEach((t, i) => {
     const y = 2.5 + i * 1.25;
@@ -664,47 +671,253 @@ function closing(p, ch, thanksLine) {
 }
 
 /* =========================================================
+   ファッション心理学に名前を与える
+   ========================================================= */
+
+function psychName(p, ch) {
+  const s = p.addSlide();
+  s.background = { color: PLUM };
+  chapter(s, ch, true);
+  s.addText("わたしが研究しているのが、この「観念」です。", {
+    x: M, y: 1.7, w: CW, h: 0.6,
+    fontFace: BODY, fontSize: 17, color: ROSE_LT, margin: 0, valign: "middle",
+  });
+  s.addText("これが、\nファッション心理学です。", {
+    x: M, y: 2.35, w: CW, h: 1.7,
+    fontFace: HEAD, fontSize: 40, bold: true, color: WHITE, margin: 0, valign: "middle", lineSpacing: 62,
+  });
+
+  const cols = [
+    ["装いと自己イメージ", "人は服そのものではなく、\nその先の「なりたい自分」を買う"],
+    ["観念と行動", "知識ではなく観念が、\n実際の行動を決めている"],
+    ["変化のプロセス", "観念には、\n書き換わる順番がある"],
+  ];
+  const cw = 3.58, gap = 0.4;
+  cols.forEach((c, i) => {
+    const x = M + i * (cw + gap);
+    s.addShape(p.ShapeType.roundRect, {
+      x, y: 4.3, w: cw, h: 1.75, rectRadius: 0.07, fill: { color: GREIGE_LT },
+    });
+    s.addText(c[0], {
+      x: x + 0.3, y: 4.48, w: cw - 0.6, h: 0.45,
+      fontFace: HEAD, fontSize: 17, bold: true, color: PLUM, margin: 0, valign: "middle",
+    });
+    s.addText(c[1], {
+      x: x + 0.3, y: 4.98, w: cw - 0.6, h: 0.9,
+      fontFace: BODY, fontSize: 13, color: INK, margin: 0, valign: "top", lineSpacing: 21,
+    });
+  });
+
+  s.addText("「似合う」を当てる学問ではありません。「なぜ着ないのか」を扱う学問です。", {
+    x: M, y: 6.25, w: CW, h: 0.5,
+    fontFace: BODY, fontSize: 15, bold: true, color: ROSE_LT, margin: 0, valign: "middle",
+  });
+  s.addNotes("ここで初めて名前を与える。実例→名前の順。名乗りではなく、定義として言う。");
+}
+
+/* =========================================================
+   AI実演パート
+   ========================================================= */
+
+function aiIntro(p, ch) {
+  const s = p.addSlide();
+  s.background = { color: PLUM };
+  chapter(s, ch, true);
+  s.addText("ここからは、実際にAIを使ってみます", {
+    x: M, y: 2.2, w: CW, h: 0.6,
+    fontFace: BODY, fontSize: 17, color: ROSE_LT, margin: 0, valign: "middle",
+  });
+  s.addText("同じお題を、\nAIに2回頼んでみます。", {
+    x: M, y: 2.85, w: CW, h: 1.7,
+    fontFace: HEAD, fontSize: 40, bold: true, color: WHITE, margin: 0, valign: "middle", lineSpacing: 62,
+  });
+  s.addShape(p.ShapeType.roundRect, {
+    x: M, y: 4.8, w: CW, h: 1.15, rectRadius: 0.07, fill: { color: PLUM_DK },
+  });
+  s.addText("お題：パーソナルスタイリストの、Instagramプロフィール文", {
+    x: M, y: 4.8, w: CW, h: 1.15, align: "center", valign: "middle",
+    fontFace: BODY, fontSize: 20, bold: true, color: GREIGE, margin: 0,
+  });
+  s.addText("※ AIが苦手な方も大丈夫です。見るだけでイメージできます。", {
+    x: M, y: 6.15, w: CW, h: 0.45,
+    fontFace: BODY, fontSize: 14, color: MUTED, margin: 0, valign: "middle",
+  });
+  s.addNotes("実演パートの入口。ここで空気が変わる。画面共有に切り替える合図。");
+}
+
+/** AIへの頼み方と出力の対比（1枚） */
+function aiCase(p, ch, opts) {
+  const s = contentSlide(p, ch, opts.title, opts.lead);
+
+  // 左：プロンプト
+  s.addShape(p.ShapeType.roundRect, {
+    x: M, y: 2.15, w: 5.5, h: 3.55, rectRadius: 0.07, fill: { color: PLUM },
+  });
+  s.addText("AIへの頼み方", {
+    x: M + 0.32, y: 2.3, w: 4.9, h: 0.34,
+    fontFace: BODY, fontSize: 12, bold: true, color: ROSE_LT, charSpacing: 2, margin: 0, valign: "middle",
+  });
+  s.addText(opts.prompt, {
+    x: M + 0.32, y: 2.7, w: 4.9, h: 2.85,
+    fontFace: BODY, fontSize: opts.promptSize || 13, color: GREIGE, margin: 0, valign: "top", lineSpacing: opts.promptLine || 22,
+  });
+
+  // 右：出力
+  s.addShape(p.ShapeType.roundRect, {
+    x: M + 6.03, y: 2.15, w: 5.5, h: 3.55, rectRadius: 0.07,
+    fill: { color: opts.good ? ROSE_LT : GREIGE },
+  });
+  s.addText("出てきた文章", {
+    x: M + 6.35, y: 2.3, w: 4.9, h: 0.34,
+    fontFace: BODY, fontSize: 12, bold: true, color: ROSE_DK, charSpacing: 2, margin: 0, valign: "middle",
+  });
+  s.addText(opts.output, {
+    x: M + 6.35, y: 2.75, w: 4.9, h: 2.8,
+    fontFace: HEAD, fontSize: opts.outputSize || 16, bold: true, color: PLUM, margin: 0, valign: "top", lineSpacing: opts.outputLine || 28,
+  });
+
+  s.addShape(p.ShapeType.roundRect, {
+    x: M, y: 5.95, w: CW, h: 0.85, rectRadius: 0.07,
+    fill: { color: opts.good ? PLUM : GREIGE_LT },
+  });
+  s.addText(opts.verdict, {
+    x: M, y: 5.95, w: CW, h: 0.85, align: "center", valign: "middle",
+    fontFace: BODY, fontSize: 17, bold: true, color: opts.good ? GREIGE : PLUM, margin: 0,
+  });
+  s.addNotes(opts.notes);
+}
+
+function aiPlain(p, ch) {
+  aiCase(p, ch, {
+    title: "① ふつうに、AIに頼むと",
+    lead: "たぶん、多くの方がこう頼んでいます",
+    prompt: "パーソナルスタイリストの\nInstagramプロフィール文を\n書いてください。",
+    promptSize: 16,
+    promptLine: 30,
+    output: "「パーソナルカラー・骨格診断で\nあなたの魅力を引き出します✨\n一人ひとりに寄り添った\nスタイリングをご提案します」",
+    verdict: "……どこかで見たことがある文章。誰にでも当てはまり、誰にも刺さりません。",
+    good: false,
+    notes: "実際に自分のAIで生成して撮影すること。ここは本物の出力を見せる。",
+  });
+}
+
+function aiWithPsych(p, ch) {
+  aiCase(p, ch, {
+    title: "② ファッション心理学を入れて、頼むと",
+    lead: "同じAIです。渡す中身だけを変えます",
+    prompt:
+      "お客様は40代の女性。\nクローゼットは一杯なのに\n「着る服がない」と感じています。\n\n背景には「安いから買ってしまう」\n「私なんかが明るい色を着ても」\nという思い込みがあります。\n\n診断だけでなく、その思い込みを\n一緒に見直すセッションをしています。\n\nこの内容で、資格名を並べず、\nお客様がどうなるかを書いてください。",
+    promptSize: 11.5,
+    promptLine: 18,
+    output: "「“着る服がない”の正体は、\nクローゼットではなく\n思い込みかもしれません。\n\n40代の“似合う”を、\n心の側から整えるスタイリング。」",
+    outputSize: 17,
+    outputLine: 30,
+    verdict: "この文章は、あなたにしか書けません。同じAI、同じお題、違うのは渡した中身だけです。",
+    good: true,
+    notes: "①と②を並べて見せた瞬間が、この動画の最大の山。ゆっくり読ませる間を取る。",
+  });
+}
+
+function aiLesson(p, ch) {
+  statementSlide(p, ch,
+    "AIが賢いのでは\nありません。",
+    "渡す中身を持っている人が、AIを使うと強いんです。\nお客様の観念を知っていること。提供できる変化を言葉にできること。\nそれがある人のAIと、ない人のAIでは、出てくるものがまったく違います。",
+    "この動画の結論のひとつ。「AIの使い方だけ学んでも変わらない」の根拠になる。");
+}
+
+function aiInCourse(p, ch) {
+  const s = contentSlide(p, ch, "AIは、7つの全部に効きます", "講座では、AIを使いながら進めていきます");
+  const uses = [
+    ["価値の言語化", "自分の強みを、AIと壁打ちして言葉にする"],
+    ["発信", "投稿ネタ・リールのシナリオを、型に沿って量産する"],
+    ["セッション", "診断レポートの下書き、お客様への振り返りメール"],
+    ["仕組み化", "LINEの配信文、よくある質問、申込み後の自動案内"],
+  ];
+  uses.forEach((u, i) => {
+    const x = M + (i % 2) * 5.93;
+    const y = 2.3 + Math.floor(i / 2) * 1.1;
+    s.addShape(p.ShapeType.roundRect, {
+      x, y, w: 5.6, h: 0.95, rectRadius: 0.06, fill: { color: i % 2 === 0 ? GREIGE_LT : GREIGE },
+    });
+    s.addText(u[0], {
+      x: x + 0.3, y: y + 0.1, w: 5.0, h: 0.38,
+      fontFace: HEAD, fontSize: 17, bold: true, color: PLUM, margin: 0, valign: "middle",
+    });
+    s.addText(u[1], {
+      x: x + 0.3, y: y + 0.5, w: 5.0, h: 0.36,
+      fontFace: BODY, fontSize: 13, color: INK, margin: 0, valign: "middle",
+    });
+  });
+
+  s.addShape(p.ShapeType.roundRect, {
+    x: M, y: 4.7, w: CW, h: 1.0, rectRadius: 0.07, fill: { color: ROSE_LT },
+  });
+  s.addText("AIの使い方だけを教える講座ではありません。AIに渡す「中身」を作るところから、一緒にやります。", {
+    x: M, y: 4.7, w: CW, h: 1.0, align: "center", valign: "middle",
+    fontFace: BODY, fontSize: 17, bold: true, color: PLUM, margin: 0,
+  });
+
+  s.addShape(p.ShapeType.roundRect, {
+    x: M, y: 5.95, w: CW, h: 0.85, rectRadius: 0.07, fill: { color: PLUM },
+  });
+  s.addText("ファッション心理学　×　AI　×　仕組み化", {
+    x: M, y: 5.95, w: CW, h: 0.85, align: "center", valign: "middle",
+    fontFace: HEAD, fontSize: 22, bold: true, color: WHITE, margin: 0, charSpacing: 2,
+  });
+  s.addNotes("インスタのプロフィールで約束していることを、ここで回収する。");
+}
+
+/* =========================================================
    デッキ組み立て
    ========================================================= */
 
-/** 1本版（全19枚）：LINE登録直後に配信する22分の本編 */
+/** 1本版（全23枚）：LINE登録直後に配信する約23分の本編 */
 function buildSingle() {
   const p = new pptxgen();
   p.layout = "LAYOUT_WIDE";
   p.author = "Fashion Entrepreneurship Academia";
-  p.title = "資格を取ったのに、なぜ選ばれないのか";
+  p.title = "資格を取ったのに、なぜ選ばれないのか（ファッション心理学 × AI）";
 
   coverSingle(p);        // 1
   agendaSingle(p);       // 2
+  // ① なぜ、選ばれないのか
   symptoms(p, "");       // 3
   notSense(p, "");       // 4
   commodity(p, "");      // 5
   notChange(p, "");      // 6
+  // ② ファッション心理学から見た、本当の理由
   voices(p, "");         // 7
   kannen(p, "");         // 8
   knowledge(p, "");      // 9
-  threePhases(p, "");    // 10
-  gapSuit(p, "");        // 11
-  orderChange(p, "");    // 12
-  sevenMap(p, "");       // 13
-  goUp(p, "");           // 14
-  fourChecks(p, "");     // 15
-  mostCommon(p, "");     // 16
-  consult(p, "");        // 17
-  whoFor(p, "");         // 18
-  closing(p, "", "最後までご覧いただき、ありがとうございました"); // 19
+  psychName(p, "");      // 10  ← ここで初めて名前を与える
+  threePhases(p, "");    // 11
+  gapSuit(p, "");        // 12
+  orderChange(p, "");    // 13
+  // ③ AIで、今日から変えられること
+  aiIntro(p, "");        // 14
+  aiPlain(p, "");        // 15
+  aiWithPsych(p, "");    // 16
+  aiLesson(p, "");       // 17
+  aiInCourse(p, "");     // 18
+  // 地図とチェック
+  sevenMap(p, "");       // 19
+  fourChecks(p, "");     // 20
+  mostCommon(p, "");     // 21
+  // 個別相談
+  consult(p, "");        // 22
+  closing(p, "", "最後までご覧いただき、ありがとうございました"); // 23
 
   return p.writeFile({ fileName: "無料動画スライド_1本版.pptx" });
 }
 
-/** 3本版（全23枚）：会員サイトの無料コース（3レッスン） */
+/** 3本版（全26枚）：会員サイトの無料コース（3レッスン） */
 function buildThree() {
   const p = new pptxgen();
   p.layout = "LAYOUT_WIDE";
   p.author = "Fashion Entrepreneurship Academia";
-  p.title = "無料ミニ講座 ― 選ばれるファッションのお仕事";
+  p.title = "無料ミニ講座 ― ファッション心理学 × AI";
 
-  // レッスン1（1-7）
+  // レッスン1
   coverChapter(p, 1, "パーソナルスタイリスト／イメージコンサルタントの方へ",
     "資格を取ったのに、\nなぜ選ばれないのか", "約10分",
     "冒頭15秒が勝負。名乗りより先にタイトルを言ってもいい。");
@@ -712,60 +925,38 @@ function buildThree() {
   notSense(p, "レッスン 1");
   commodity(p, "レッスン 1");
   notChange(p, "レッスン 1");
-  {
-    const s = contentSlide(p, "レッスン 1", "これは、意志の問題ではありません", "あなたの説明が下手だからでもありません");
-    s.addShape(p.ShapeType.roundRect, {
-      x: M, y: 2.4, w: CW, h: 1.3, rectRadius: 0.07, fill: { color: ROSE_LT },
-    });
-    s.addText("ここには、まったく別の理由があります。", {
-      x: M, y: 2.4, w: CW, h: 1.3, align: "center", valign: "middle",
-      fontFace: HEAD, fontSize: 30, bold: true, color: PLUM, margin: 0,
-    });
-    s.addText("この理由が分かると", {
-      x: M, y: 3.95, w: CW, h: 0.4,
-      fontFace: BODY, fontSize: 15, bold: true, color: ROSE_DK, charSpacing: 2, margin: 0, valign: "middle",
-    });
-    ["同じ診断をしても、お客様の変わり方がまったく違ってきます",
-      "単発の診断で疲れてしまう働き方からも、抜けられます"].forEach((t, i) => {
-      const y = 4.45 + i * 0.85;
-      s.addShape(p.ShapeType.roundRect, {
-        x: M, y, w: CW, h: 0.72, rectRadius: 0.06, fill: { color: GREIGE_LT },
-      });
-      numCircle(p, s, M + 0.28, y + 0.14, 0.44, i + 1, PLUM, ROSE_LT, 15);
-      s.addText(t, {
-        x: M + 0.95, y, w: CW - 1.3, h: 0.72,
-        fontFace: BODY, fontSize: 18, color: INK, margin: 0, valign: "middle",
-      });
-    });
-    s.addNotes("次のレッスンへの引き。理由そのものはここでは言わない。");
-  }
   nextSlide(p, 1, "次のレッスン", "お客様が変わらない、\n本当の理由",
     "「たぶん聞いたことがない話です」と添える。");
 
-  // レッスン2（8-15）
+  // レッスン2
   coverChapter(p, 2, "無料ミニ講座 2本目",
-    "お客様が変わらない、\n本当の理由", "約12分　／　3本の中で、いちばんお伝えしたい回です",
+    "お客様が変わらない、\n本当の理由", "約12分　／　ファッション心理学の話です",
     "3本の中心。ここで「この人は他と違う」と思ってもらう。");
   voices(p, "レッスン 2");
   kannen(p, "レッスン 2");
   knowledge(p, "レッスン 2");
+  psychName(p, "レッスン 2");
   threePhases(p, "レッスン 2");
   gapSuit(p, "レッスン 2");
   orderChange(p, "レッスン 2");
-  nextSlide(p, 2, "次のレッスン・最終回", "選ばれている人が、\n整えている7つ",
-    "「自分がどこで止まっているか分かるチェックもあります」と予告する。");
+  nextSlide(p, 2, "次のレッスン・最終回", "AIで、\n今日から変えられること",
+    "「実演します」と予告する。実演があると視聴率が上がる。");
 
-  // レッスン3（16-23）
+  // レッスン3
   coverChapter(p, 3, "無料ミニ講座 3本目（最終回）",
-    "選ばれている人が、\n整えている7つ", "約12分　／　やることリストではなく、現在地を知るための地図です",
-    "地図を渡して現在地を自覚してもらう。「7つもやるのか」と思わせないこと。");
+    "AIで、\n今日から変えられること", "約14分　／　実演つき。そして整えるべき7つ",
+    "実演がこのレッスンの山。画面共有の準備をしてから撮る。");
+  aiIntro(p, "レッスン 3");
+  aiPlain(p, "レッスン 3");
+  aiWithPsych(p, "レッスン 3");
+  aiLesson(p, "レッスン 3");
+  aiInCourse(p, "レッスン 3");
   sevenMap(p, "レッスン 3");
-  goUp(p, "レッスン 3");
   fourChecks(p, "レッスン 3");
   mostCommon(p, "レッスン 3");
   consult(p, "レッスン 3");
   whoFor(p, "レッスン 3");
-  closing(p, "レッスン 3", "3日間、ありがとうございました");
+  closing(p, "レッスン 3", "3本、ありがとうございました");
 
   return p.writeFile({ fileName: "無料ミニ講座スライド_3本版.pptx" });
 }
