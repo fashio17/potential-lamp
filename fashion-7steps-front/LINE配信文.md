@@ -31,7 +31,7 @@ Instagram プロフィール
 | 動画（8分46秒・既存のもの） | `https://funnel.fashio17.com/p/video1` |
 | アカデミア資料 | `https://funnel.fashio17.com/p/academia` |
 | 診断（なりたい自分ギャップ） | `https://utage-system.com/p/nLlD4Z9mSVWr` |
-| 個別相談 申込 | ［作成済みの申込URLを入れてください］ |
+| 個別相談 申込 | `https://utage-system.com/event/XZDWcN4ju08q/register` |
 
 > **動画は既存の8分46秒版をそのまま使います。** `動画台本_1本版.md`（22分）は差し替え用ではなく、**会員サイトや講座内で使う拡張版**として残してあります。詳細は `README.md` を参照してください。
 
@@ -212,7 +212,7 @@ Instagram プロフィール
 わたしがお役に立てないと思ったら
 正直にそうお伝えします。
 
-　［個別相談の申込URL］
+　https://utage-system.com/event/XZDWcN4ju08q/register
 ```
 
 ---
@@ -261,7 +261,7 @@ Instagram プロフィール
 
 だから、一度お話ししませんか。
 
-　［個別相談の申込URL］
+　https://utage-system.com/event/XZDWcN4ju08q/register
 ```
 
 ---
@@ -299,7 +299,7 @@ Instagram プロフィール
 一度お話しするだけでも、
 だいぶ整理がつくと思います。
 
-　［個別相談の申込URL］
+　https://utage-system.com/event/XZDWcN4ju08q/register
 
 一週間、ありがとうございました。
 ```
