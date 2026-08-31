@@ -22,7 +22,7 @@ dm () { ffmpeg -y -v error -i "$B" -an \
 
 # 白いバッグの寄り
 bg () { ffmpeg -y -v error -i "$A" -an \
-  -vf "trim=start=$1:duration=$L,setpts=PTS-STARTPTS,crop=675:1200:690:1650,scale=1080:1920,setpts=$R*PTS,fps=30,setsar=1" \
+  -vf "trim=start=$1:duration=$L,setpts=PTS-STARTPTS,crop=675:1200:690:1900,scale=1080:1920,setpts=$R*PTS,fps=30,setsar=1" \
   -c:v libx264 -preset medium -crf 17 -pix_fmt yuv420p "$2"; }
 
 NN=$(python3 -c "print(int(2.07*30))")

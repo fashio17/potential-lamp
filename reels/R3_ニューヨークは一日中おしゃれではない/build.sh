@@ -14,7 +14,12 @@ cut () { ffmpeg -y -v error -i "$1" -an \
   -vf "trim=start=$2:duration=$L,setpts=PTS-STARTPTS,scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setpts=$R*PTS,fps=30,setsar=1" \
   -c:v libx264 -preset medium -crf 17 -pix_fmt yuv420p "$3"; }
 
-cut $ME 0.30 $SP/segR3/k1.mp4    # 本人・昼（表紙）
+# 本人のカットは、中央のテロップが顔にかからないよう下側を切る
+mecut () { ffmpeg -y -v error -i "$ME" -an \
+  -vf "trim=start=$1:duration=$L,setpts=PTS-STARTPTS,crop=1215:2160:300:$2,scale=1080:1920,setpts=$R*PTS,fps=30,setsar=1" \
+  -c:v libx264 -preset medium -crf 17 -pix_fmt yuv420p "$3"; }
+
+mecut 0.30 1500 $SP/segR3/k1.mp4    # 本人・昼（表紙）
 cut $FT 0.30 $SP/segR3/k2.mp4    # 他人の足元
 cut $FT 1.70 $SP/segR3/k3.mp4    # 他人の足元
 cut $SH 0.30 $SP/segR3/k4.mp4    # 金銀の靴
@@ -25,8 +30,8 @@ cut $IN 0.60 $SP/segR3/k7.mp4    # 店内
 ffmpeg -y -v error -i "$IN" -an \
   -vf "trim=start=5.40:duration=$L,setpts=PTS-STARTPTS,crop=1620:2880:270:0,scale=1080:1920,setpts=$R*PTS,fps=30,setsar=1" \
   -c:v libx264 -preset medium -crf 17 -pix_fmt yuv420p $SP/segR3/k8.mp4
-cut $ME 4.00 $SP/segR3/k9.mp4    # 本人
-cut $ME 6.30 $SP/segR3/k10.mp4   # 本人（締め）
+mecut 4.00 1500 $SP/segR3/k9.mp4    # 本人
+mecut 6.30 1700 $SP/segR3/k10.mp4   # 本人（締め）
 
 cd $SP/segR3
 : > list.txt; for i in $(seq 1 10); do echo "file 'k$i.mp4'" >> list.txt; done

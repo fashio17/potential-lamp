@@ -20,16 +20,16 @@ ST="fontfile=$FT:fontcolor=white:box=1:boxcolor=black@0.58:boxborderw=26:shadowc
 d  () { echo "drawtext=${ST}:textfile=$D/$1.txt:fontsize=$4:y=(h-th)/2:enable='between(t,$2,$3)'"; }
 dy () { echo "drawtext=${ST}:textfile=$D/$1.txt:fontsize=$4:y=(h-th)/2+$5:enable='between(t,$2,$3)'"; }
 
-CH="$(dy 1   0.10  2.00 56 380),\
+CH="$(d 1 0.10 2.00 56),\
 $(d  2   2.17  4.07 66),\
 $(d  3   4.24  6.14 56),\
-$(dy 4   6.31  8.21 66 450),\
-$(dy 5   8.38 10.28 70 450),\
+$(d 4 6.31 8.21 66),\
+$(d 5 8.38 10.28 70),\
 $(d  6  10.45 12.35 64),\
 $(d  7  12.52 14.42 64),\
 $(d  8  14.59 16.49 54),\
-$(dy 9  16.66 18.56 60 380),\
-$(dy 10 18.73 20.63 62 380)"
+$(d 9 16.66 18.56 60),\
+$(d 10 18.73 20.63 62)"
 
 ffmpeg -y -v error -i $SP/baseR3.mp4 -f lavfi -i anullsrc=r=44100:cl=stereo \
  -filter_complex "[0:v]eq=contrast=1.06:saturation=1.08:brightness=0.006,unsharp=5:5:0.4,${CH}[v]" \
