@@ -8,6 +8,7 @@ ST=$SRC/c1a4daf8-IMG_0837.mov   # パリの通りを歩く
 DM=$SRC/2696df7f-IMG_0841.mov   # ドーム（上部だけ）
 RK=$SRC/c1a18c04-image.jpg      # パリの店のラック（人なし）4284×5712
 SH=$SRC/693b589d-IMG_7154.mov   # 街の店先・マネキンと服（顔の識別できる人なし）
+PS=$SRC/911a086e-IMG_0944.mov   # パリの通り・国旗と花（t=0.6〜1.9が安全）
 R=1.6016; L=1.28
 
 full () { ffmpeg -y -v error -i "$1" -an \
@@ -33,7 +34,7 @@ dome     4.30      $SP/segR1/k2.mp4                       # ドーム
 full $SH 1.20      $SP/segR1/k3.mp4                       # 街の店先・マネキン
 rack "3213:5712:0:0"      $SP/segR1/k4.mp4  1.00 1.05     # ラック全体
 rack "2000:3556:200:1200" $SP/segR1/k5.mp4  1.05 1.00     # ラック寄り
-dome     5.65      $SP/segR1/k6.mp4                       # ドーム
+full $PS 0.70      $SP/segR1/k6.mp4                       # パリの通り・国旗と花
 bag      7.10      $SP/segR1/k7.mp4                       # 白いバッグの寄り
 full $SH 2.60      $SP/segR1/k8.mp4                       # 街の店先
 low  $CR 4.15 1400 $SP/segR1/k9.mp4                       # 横断歩道（締め）★本人
