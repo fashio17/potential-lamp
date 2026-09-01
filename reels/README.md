@@ -234,5 +234,6 @@ md5sum /root/.claude/uploads/*/*.mov | sort
   https://claude.ai/code/artifact/3aeb81cf-90d9-4cf2-a42a-65478a94b68e
 - 海外リサーチ×AIリール勉強会（LINE6通・ストーリー・個別相談への動線）
   https://claude.ai/code/artifact/31bf47fc-7401-4880-9c4c-a1e0d2820822
+- ストーリーの出し方・日別台本 → `運用/ストーリーの出し方.md`
 - 事業と経歴の前提 → リポジトリ直下の `CLAUDE.md`
 - 素材の対応表 → `reels/素材台帳.md`
