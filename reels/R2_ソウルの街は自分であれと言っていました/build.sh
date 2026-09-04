@@ -1,12 +1,19 @@
 #!/bin/bash
 set -e
-SRC=/root/.claude/uploads/1a5c0839-14a8-5840-9db3-563ce87c0be0
+REPO=/home/user/potential-lamp/reels/素材/ソウル
 SP=/tmp/claude-0/-home-user-potential-lamp/1a5c0839-14a8-5840-9db3-563ce87c0be0/scratchpad
-mkdir -p $SP/segR2
-A=$SRC/04716913-image.jpg   # ソウルの売り場のラック（やわらかい色）4284×5712
-B=$SRC/e4da7eee-image.jpg   # 本人・店の前（看板は切り落とす）4284×5712
+mkdir -p $SP/segR2 $SP/img2
+# JPEGはEXIFの回転をffmpegが見ないので、先にPILで正位置に直す（4284×5712）
+python3 - <<'PY'
+from PIL import Image, ImageOps
+R='/home/user/potential-lamp/reels/素材/ソウル'
+D='/tmp/claude-0/-home-user-potential-lamp/1a5c0839-14a8-5840-9db3-563ce87c0be0/scratchpad/img2'
+for src,out in [('売り場のラック_やわらかい色.jpg','A.jpg'),('店の前に立つ_看板あり.jpg','B.jpg')]:
+    ImageOps.exif_transpose(Image.open(f'{R}/{src}')).convert('RGB').save(f'{D}/{out}',quality=95)
+PY
+A=$SP/img2/A.jpg   # ソウルの売り場のラック（やわらかい色）
+B=$SP/img2/B.jpg   # 本人・店の前（看板は切り落とす）
 
-# 写真から1カット。$1=画像 $2=crop指定 $3=出力 $4=開始ズーム $5=終了ズーム
 pkc () { NN=$(python3 -c "print(int(2.07*30))")
   ffmpeg -y -v error -loop 1 -t 2.07 -i "$1" \
    -vf "crop=$2,scale=1620:2880,fps=30,zoompan=z='$4+($5-$4)*on/$NN':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1080x1920:fps=30,setsar=1" \
