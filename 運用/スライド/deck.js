@@ -153,14 +153,14 @@ s=p.addSlide(); bg(s,CREAM); title(s,'書き出してみてください');
 ['使えそうな写真か動画','誰に来てほしいか','何を届けているか'].forEach((t,i)=>{
   const y=1.5+i*0.78; dot(s,M,y,i+1); T(s,t,{x:M+0.75,y:y+0.05,w:CW-0.9,h:0.4,fontSize:17,color:INK});});
 card(s,M,4.0,CW,1.05,W);
-T(s,'1つ目はすぐ書けます。止まるのは、2つ目と3つ目です。\nそこが、6ヶ月かけて言葉にしていくところです。',
+T(s,'1つ目はすぐ書けます。止まるのは、2つ目と3つ目です。\nそこが、講座で言葉にしていくところです。',
  {x:M+0.3,y:4.2,w:CW-0.6,h:0.75,fontSize:14,color:BERRY,bold:true,lineSpacing:22});
 
 /* 14 SEC03 */
-section('03','講座のご案内','ファッション起業AIマスター講座\n2026年10月15日 開講','sec_ny.jpg');
+section('03','講座のご案内','2026年10月13日（火）開講\n講座は2つあります','sec_ny.jpg');
 
 /* 15 学ぶこと */
-s=p.addSlide(); bg(s,W); title(s,'この6ヶ月で学ぶこと');
+s=p.addSlide(); bg(s,W); title(s,'講座で学ぶこと');
 [['AIを中心とした発信の動線設計','撮る・書く・届けるまで'],['ファッション心理学','感性と顧客心理を言葉にする'],['コーチングの基礎','押しつけずに、続く形にする']]
 .forEach((r,i)=>{ const y=1.45+i*1.05; card(s,M,y,CW,0.9); dot(s,M+0.25,y+0.22,i+1);
   T(s,r[0],{x:M+0.9,y,w:4.3,h:0.9,fontSize:16,bold:true,color:BERRY,valign:'middle'});
@@ -169,7 +169,7 @@ T(s,'AIは、ゼロから作る道具ではありません。自分の中にあ�
  {x:M,y:4.72,w:CW,h:0.4,fontSize:14,bold:true,color:BERRY});
 
 /* 16 図解：6ヶ月でつくる動線 */
-s=p.addSlide(); bg(s,W); title(s,'6ヶ月でつくる、あなたの動線');
+s=p.addSlide(); bg(s,W); title(s,'つくるのは、あなたの動線');
 const steps=['撮る','AIで\n言葉にする','編集して\n投稿する','LINEに\n集める','お申し込み'];
 steps.forEach((t,i)=>{ const x=M+i*1.79;
   card(s,x,1.75,1.6,1.5,i===4?CREAM:SOFT);
@@ -190,65 +190,69 @@ T(s,'ただ、正直に申し上げます。\n動線を作る作業は、AIを�
 
 /* 18 向いていない方 */
 s=p.addSlide(); bg(s,W); title(s,'先に、向いていない方をお伝えします');
-[['今すぐ収入にしたい方','6ヶ月かかります'],['言われたとおりにやりたい方','自分の言葉を探す講座です']]
+[['今すぐ収入にしたい方','時間がかかります'],['言われたとおりにやりたい方','自分の言葉を探す講座です']]
 .forEach((r,i)=>{ const y=1.55+i*1.25; card(s,M,y,CW,1.05);
   T(s,r[0],{x:M+0.35,y:y+0.15,w:CW-0.7,h:0.4,fontSize:18,bold:true,color:BERRY});
   T(s,r[1],{x:M+0.35,y:y+0.6,w:CW-0.7,h:0.35,fontSize:14,color:INK});});
 T(s,'当てはまる方は、今日は見送ってください。',{x:M,y:4.35,w:CW,h:0.5,fontSize:18,bold:true,color:BERRY});
 
-/* 19 2つのコース */
-s=p.addSlide(); bg(s,W); title(s,'違うのは、2つだけです');
+/* 19 2つの講座 */
+s=p.addSlide(); bg(s,W); title(s,'講座は2つあります');
 s.addTable([
- [{text:'',options:{fill:{color:W}}},{text:'レギュラー',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}},{text:'VIP',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}}],
- [{text:'講座（月1回・計6回）'},{text:'1・4ヶ月目はハイブリッド\nほかはオンライン'},{text:'毎月すべて対面（東京）'}],
- [{text:'質問会（月1回・計6回）'},{text:'オンライン・合同'},{text:'オンライン・合同'}],
- [{text:'個別のZoom対応'},{text:'契約後すぐ／最終月の2回'},{text:'随時'}],
- [{text:'チャットサポート'},{text:'無制限'},{text:'無制限'}],
- [{text:'ランチ会'},{text:'4ヶ月目・合同'},{text:'4ヶ月目・合同'}],
-],{x:M,y:1.4,w:CW,colW:[2.9,2.94,2.92],fontSize:12,fontFace:F,color:INK,border:{pt:0.5,color:'DDD5D2'},valign:'middle',rowH:0.42,margin:6});
-T(s,'質問会もランチ会も、どちらのコースの方も一緒です。対面はハイブリッドなので、遠方の方はオンラインで参加できます。',
- {x:M,y:4.55,w:CW,h:0.5,fontSize:13,color:BERRY,bold:true,lineSpacing:20});
+ [{text:'',options:{fill:{color:W}}},{text:'AIマーケティング\n集中講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}},{text:'ファッション起業\nAIマスター講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}}],
+ [{text:'期間'},{text:'3ヶ月'},{text:'6ヶ月'}],
+ [{text:'オンライン講座'},{text:'6回（60分／回）'},{text:'8回（90分／回）'}],
+ [{text:'対面ワークショップ'},{text:'—'},{text:'3回（1回3時間程度・東京）'}],
+ [{text:'個別のサポート'},{text:'個別面談 1回'},{text:'事前・事後の個別サポート'}],
+ [{text:'質問'},{text:'質問し放題'},{text:'チャットサポート'}],
+ [{text:'会員サイト'},{text:'あり'},{text:'あり'}],
+],{x:M,y:1.4,w:CW,colW:[2.3,2.9,3.56],fontSize:12,fontFace:F,color:INK,border:{pt:0.5,color:'DDD5D2'},valign:'middle',rowH:0.42,margin:6});
+T(s,'どちらが上ということではありません。関わり方が違います。',
+ {x:M,y:4.55,w:CW,h:0.5,fontSize:14,color:BERRY,bold:true});
 
-/* 20 図解：6ヶ月の進み方 */
-s=p.addSlide(); bg(s,W); title(s,'6ヶ月の進み方（レギュラー）');
-for(let i=0;i<6;i++){ const x=M+i*1.485;
-  const face=(i===0||i===3);
-  card(s,x,1.55,1.36,2.35,face?CREAM:SOFT);
-  T(s,(i+1)+'ヶ月目',{x:x,y:1.7,w:1.36,h:0.3,fontSize:12,bold:true,color:MUTED,align:'center'});
-  T(s,face?'講座\nハイブリッド\n（東京＋\nオンライン）':'講座\nオンライン',
-    {x:x+0.05,y:2.1,w:1.26,h:1.1,fontSize:11,bold:true,color:BERRY,align:'center',lineSpacing:16});
-  T(s,'質問会',{x:x,y:3.35,w:1.36,h:0.3,fontSize:11,color:INK,align:'center'});
-  if(i===3) T(s,'ランチ会',{x:x,y:3.62,w:1.36,h:0.25,fontSize:10,bold:true,color:ROSE,align:'center'});
-}
-card(s,M,4.15,CW,0.95,SOFT);
-T(s,'個別のZoom面談は、ご契約後すぐと最終月の2回です。',
- {x:M+0.3,y:4.15,w:CW-0.6,h:0.95,fontSize:14,bold:true,color:BERRY,valign:'middle'});
+/* 20 どちらを選ぶか */
+s=p.addSlide(); bg(s,W); title(s,'どちらを選びますか');
+card(s,M,1.45,4.28,2.9,SOFT);
+T(s,'まず、ご自分で進めたい方',{x:M+0.3,y:1.72,w:3.7,h:0.4,fontSize:16,bold:true,color:BERRY});
+T(s,'AIマーケティング集中講座',{x:M+0.3,y:2.2,w:3.7,h:0.4,fontSize:14,color:MUTED});
+T(s,'オンラインだけで完結します。\n3ヶ月、6回。\n質問はいつでもしてください。',
+ {x:M+0.3,y:2.7,w:3.7,h:1.4,fontSize:14,color:INK,lineSpacing:26});
+card(s,5.1,1.45,4.28,2.9,CREAM);
+T(s,'お会いして、一緒にやりたい方',{x:5.4,y:1.72,w:3.7,h:0.4,fontSize:16,bold:true,color:BERRY});
+T(s,'ファッション起業AIマスター講座',{x:5.4,y:2.2,w:3.7,h:0.4,fontSize:14,color:MUTED});
+T(s,'東京で3回、お会いします。\n6ヶ月、オンライン8回。\n事前と事後に、個別に見ます。',
+ {x:5.4,y:2.7,w:3.7,h:1.4,fontSize:14,color:INK,lineSpacing:26});
+card(s,M,4.5,CW,0.7,SOFT);
+T(s,'迷われたら、個別相談でお聞きします。合わないほうを、はっきり申し上げます。',
+ {x:M+0.3,y:4.5,w:CW-0.6,h:0.7,fontSize:14,bold:true,color:BERRY,valign:'middle'});
 
 /* 21 受講料 */
 s=p.addSlide(); bg(s,W); title(s,'受講料');
-card(s,M,1.45,4.28,2.2,SOFT);
-T(s,'レギュラーコース',{x:M+0.3,y:1.68,w:3.7,h:0.32,fontSize:15,bold:true,color:BERRY});
-T(s,'398,000円',{x:M+0.3,y:2.1,w:3.7,h:0.7,fontSize:32,bold:true,color:BERRY});
-T(s,'定員10名',{x:M+0.3,y:2.95,w:3.7,h:0.32,fontSize:14,color:MUTED});
-card(s,5.1,1.45,4.28,2.2,CREAM);
-T(s,'VIPコース',{x:5.4,y:1.68,w:3.7,h:0.32,fontSize:15,bold:true,color:BERRY});
-T(s,'660,000円',{x:5.4,y:2.1,w:3.7,h:0.7,fontSize:32,bold:true,color:BERRY});
-T(s,'定員3名',{x:5.4,y:2.95,w:3.7,h:0.32,fontSize:14,color:MUTED});
-T(s,'レギュラーは、講座6回・質問会6回・個別Zoom 2回・ランチ会で15回。1回あたり約26,500円です。\nお支払いは一括をお願いしています。分割をご希望の方はご相談ください。',
- {x:M,y:3.85,w:CW,h:1.0,fontSize:14,color:INK,lineSpacing:26});
+card(s,M,1.45,4.28,2.35,SOFT);
+T(s,'AIマーケティング集中講座',{x:M+0.3,y:1.66,w:3.7,h:0.32,fontSize:14,bold:true,color:BERRY});
+T(s,'88,000円',{x:M+0.3,y:2.05,w:3.7,h:0.7,fontSize:34,bold:true,color:BERRY});
+T(s,'3ヶ月／定員20名',{x:M+0.3,y:2.88,w:3.7,h:0.32,fontSize:14,color:MUTED});
+T(s,'お支払いは一括です',{x:M+0.3,y:3.28,w:3.7,h:0.32,fontSize:13,color:INK});
+card(s,5.1,1.45,4.28,2.35,CREAM);
+T(s,'ファッション起業AIマスター講座',{x:5.4,y:1.66,w:3.8,h:0.32,fontSize:14,bold:true,color:BERRY});
+T(s,'330,000円',{x:5.4,y:2.05,w:3.7,h:0.7,fontSize:34,bold:true,color:BERRY});
+T(s,'6ヶ月／定員10名',{x:5.4,y:2.88,w:3.7,h:0.32,fontSize:14,color:MUTED});
+T(s,'6回払いまで分割できます',{x:5.4,y:3.28,w:3.7,h:0.32,fontSize:13,color:INK});
+T(s,'金額を伏せたままお集めしたくないので、この場で全部お伝えしました。\n今日お決めいただく必要はありません。',
+ {x:M,y:4.0,w:CW,h:1.0,fontSize:14,color:INK,lineSpacing:26});
 
 /* 22 定員と締切 */
 s=p.addSlide(); bg(s,W); title(s,'定員と締切');
-[['お申し込み締切','2026年10月10日（土）'],['開講','2026年10月15日（木）'],['VIPコース','定員3名。埋まり次第、締め切ります']]
+[['お申し込み締切','2026年10月12日（月）'],['開講','2026年10月13日（火）'],['定員','AIマーケティング集中講座 20名／ファッション起業AIマスター講座 10名']]
 .forEach((r,i)=>{ const y=1.5+i*1.0; card(s,M,y,CW,0.85);
-  T(s,r[0],{x:M+0.35,y,w:3.0,h:0.85,fontSize:15,bold:true,color:MUTED,valign:'middle'});
-  T(s,r[1],{x:M+3.5,y,w:CW-3.9,h:0.85,fontSize:17,bold:true,color:BERRY,valign:'middle'});});
-T(s,'毎月お会いして、Zoomでも随時お受けするので、3名がお約束を守れる限界です。',
- {x:M,y:4.6,w:CW,h:0.4,fontSize:13,color:INK});
+  T(s,r[0],{x:M+0.35,y,w:2.6,h:0.85,fontSize:15,bold:true,color:MUTED,valign:'middle'});
+  T(s,r[1],{x:M+3.1,y,w:CW-3.5,h:0.85,fontSize:15,bold:true,color:BERRY,valign:'middle'});});
+T(s,'締切の翌日が開講です。お手続きの都合がある方は、早めにご連絡ください。',
+ {x:M,y:4.6,w:CW,h:0.5,fontSize:14,bold:true,color:BERRY});
 
 /* 23 欠席 */
 s=p.addSlide(); bg(s,W); title(s,'出られない回があっても大丈夫です');
-['会員サイトがあります。動画の教材も順次増えています','欠席された回は、アーカイブでご覧いただけます','VIPの方には、その回のぶんを個別でおぎないます']
+['会員サイトがあります。動画の教材も順次増えています','欠席された回は、アーカイブでご覧いただけます','ファッション起業AIマスター講座の方は、個別サポートでおぎないます']
 .forEach((t,i)=>{ const y=1.55+i*0.85; dot(s,M,y,i+1); T(s,t,{x:M+0.75,y:y+0.05,w:CW-0.9,h:0.4,fontSize:15,color:INK});});
 card(s,M,4.15,CW,0.95,CREAM);
 T(s,'6ヶ月のあいだには、どうしても出られない回が出てくると思います。',
