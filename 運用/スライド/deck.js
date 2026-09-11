@@ -25,16 +25,16 @@ function section(n,t,sub,img){
 /* 1 表紙 */
 let s=p.addSlide(); bg(s,BERRY); photoRight(s,'sec_paris.jpg');
 T(s,'ファッション起業AIマスター講座',{x:M,y:1.5,w:4.5,h:0.4,fontSize:14,color:ROSE,bold:true});
-T(s,'3カ国で見てきたことを、\nAIで発信に変える90分',{x:M,y:1.95,w:4.6,h:1.7,fontSize:29,bold:true,color:W,lineSpacing:42});
+T(s,'売れる服と売れない服の違いを、\nあなたの発信に変える90分',{x:M,y:1.95,w:4.6,h:1.7,fontSize:29,bold:true,color:W,lineSpacing:42});
 T(s,'2026年9月16日（水）21:00-22:30\n松岡依里子',{x:M,y:3.75,w:4.5,h:0.8,fontSize:13,color:CREAM,lineSpacing:22});
 s.addNotes('カメラはオフのままで結構です、途中退出も可、と最初に伝える。');
 
 /* 2 今日の90分 */
 s=p.addSlide(); bg(s,W); title(s,'今日の90分');
-[['前半 45分','3カ国で見てきたこと／それをどうリールにしたか'],['後半 45分','10月から始まる講座のご案内と、ご質問']]
+[['前半 45分','商社で見た「売れる服と売れない服の違い」／3カ国で見てきたこと／リール17本の結果／書き出すワーク'],['後半 45分','10月から始まる講座のご案内と、ご質問']]
 .forEach((r,i)=>{ const y=1.45+i*1.15; card(s,M,y,CW,0.95);
   T(s,r[0],{x:M+0.3,y,w:2.2,h:0.95,fontSize:17,bold:true,color:BERRY,valign:'middle'});
-  T(s,r[1],{x:M+2.6,y,w:CW-2.9,h:0.95,fontSize:14,color:INK,valign:'middle'});});
+  T(s,r[1],{x:M+2.6,y,w:CW-2.9,h:0.95,fontSize:12,color:INK,valign:'middle',lineSpacing:18});});
 card(s,M,3.95,CW,1.05,CREAM);
 T(s,'先にお伝えしておきます。後半の20分は、講座のご案内です。\n身構えずに聞いてください。合わなければ、見送ってくださってかまいません。',
  {x:M+0.3,y:4.1,w:CW-0.6,h:0.8,fontSize:14,color:BERRY,bold:true,lineSpacing:22});
@@ -43,10 +43,29 @@ T(s,'先にお伝えしておきます。後半の20分は、講座のご案内�
 s=p.addSlide(); bg(s,W);
 s.addImage({path:IMG+'me_stand.jpg',x:6.35,y:0.75,w:3.05,h:4.1,sizing:{type:'cover',w:3.05,h:4.1}});
 title(s,'松岡依里子',BERRY,5.4);
-['ファッション心理学の研究者／大学教授','ファッション起業アカデミア 主宰','長く専業主婦。50歳を過ぎてから\n猛勉強して大学教授に','研究テーマは「服が自信に変わる仕組み」']
+['ファッションの商社で\n仕入れと営業をしていました','そのあと、長く専業主婦でした','50歳を過ぎてから猛勉強して\n大学教授になりました','いまはファッション心理学者／\nファッションビジネス研究者']
 .forEach((t,i)=>{ const y=[1.5,2.25,3.0,3.95][i]; dot(s,M,y,i+1); T(s,t,{x:M+0.72,y:y+0.02,w:4.6,h:0.6,fontSize:14,color:INK,lineSpacing:21});});
 card(s,M,4.7,5.35,0.6,CREAM);
 T(s,'あきらめなければ、いくつからだって夢は叶う',{x:M+0.25,y:4.7,w:4.9,h:0.6,fontSize:14,bold:true,color:BERRY,valign:'middle'});
+
+/* 3-2 商社の話（LINE⑧で予告しているので必ず前半の頭で話す） */
+s=p.addSlide(); bg(s,W);
+s.addImage({path:IMG+'sec_shop.jpg',x:6.05,y:1.45,w:3.33,h:3.4,sizing:{type:'cover',w:3.33,h:3.4}});
+title(s,'売れる服と、売れない服',BERRY,5.3);
+T(s,'商社にいたころ、毎シーズン\n何百という服を見ていました。',{x:M,y:1.45,w:5.2,h:0.9,fontSize:15,color:INK,lineSpacing:24});
+T(s,'違いは、\nデザインでは\nありませんでした',{x:M,y:2.45,w:5.2,h:1.5,fontSize:27,bold:true,color:BERRY,lineSpacing:40});
+card(s,M,4.15,5.3,0.95,CREAM);
+T(s,'売れたのは「誰に着てほしいか」が\n決まっている服でした。',{x:M+0.28,y:4.25,w:5.0,h:0.8,fontSize:15,bold:true,color:BERRY,lineSpacing:22});
+s.addNotes('ここが今日の芯。後半の講座の話まで、この一本で通す。');
+
+/* 3-3 服だけの話ではない */
+s=p.addSlide(); bg(s,CREAM);
+T(s,'これは、服だけの話ではありません',{x:M,y:1.5,w:CW,h:0.8,fontSize:26,bold:true,color:BERRY});
+T(s,'資格があるのに、仕事になっていない。\n発信しているけれど、続かない。\n何を書けばいいのか分からない。',
+ {x:M,y:2.5,w:CW,h:1.4,fontSize:17,color:INK,lineSpacing:32});
+T(s,'足りないのは、実力ではありません。\n誰に届けるかが、まだ決まっていないだけです。',
+ {x:M,y:4.05,w:CW,h:0.9,fontSize:18,bold:true,color:BERRY,lineSpacing:28});
+s.addNotes('ここで一度、聞いている方の話に引き寄せる。');
 
 /* 4 SEC01 */
 section('01','3カ国で\n見てきたこと','ソウル・パリ・ニューヨーク\n2026年・実地','sec_shop.jpg');
