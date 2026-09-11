@@ -24,7 +24,7 @@ function section(n,t,sub,img){
 
 /* 1 表紙 */
 let s=p.addSlide(); bg(s,BERRY); photoRight(s,'sec_paris.jpg');
-T(s,'ファッション起業AIマスター講座',{x:M,y:1.5,w:4.5,h:0.4,fontSize:14,color:ROSE,bold:true});
+T(s,'ファッション起業アカデミア　講座説明会',{x:M,y:1.5,w:4.5,h:0.4,fontSize:14,color:ROSE,bold:true});
 T(s,'売れる服と売れない服の違いを、\nあなたの発信に変える90分',{x:M,y:1.95,w:4.6,h:1.7,fontSize:29,bold:true,color:W,lineSpacing:42});
 T(s,'2026年9月16日（水）21:00-22:30\n松岡依里子',{x:M,y:3.75,w:4.5,h:0.8,fontSize:13,color:CREAM,lineSpacing:22});
 s.addNotes('カメラはオフのままで結構です、途中退出も可、と最初に伝える。');
@@ -202,13 +202,15 @@ s.addTable([
  [{text:'',options:{fill:{color:W}}},{text:'AIマーケティング\n集中講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}},{text:'ファッション起業\nAIマスター講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}}],
  [{text:'期間'},{text:'3ヶ月'},{text:'6ヶ月'}],
  [{text:'オンライン講座'},{text:'6回（60分／回）'},{text:'8回（90分／回）'}],
- [{text:'対面ワークショップ'},{text:'—'},{text:'3回（1回3時間程度・東京）'}],
+ [{text:'対面ワークショップ'},{text:'—'},{text:'3回（東京・オンライン可）'}],
  [{text:'個別のサポート'},{text:'個別面談 1回'},{text:'事前・事後の個別サポート'}],
  [{text:'質問'},{text:'質問し放題'},{text:'チャットサポート'}],
  [{text:'会員サイト'},{text:'あり'},{text:'あり'}],
 ],{x:M,y:1.4,w:CW,colW:[2.3,2.9,3.56],fontSize:12,fontFace:F,color:INK,border:{pt:0.5,color:'DDD5D2'},valign:'middle',rowH:0.42,margin:6});
+T(s,'対面ワークショップは1回3時間程度。東京に来られない方は、オンラインでご参加いただけます。',
+ {x:M,y:4.66,w:CW,h:0.32,fontSize:11,color:MUTED});
 T(s,'どちらが上ということではありません。関わり方が違います。',
- {x:M,y:4.55,w:CW,h:0.5,fontSize:14,color:BERRY,bold:true});
+ {x:M,y:5.00,w:CW,h:0.45,fontSize:14,color:BERRY,bold:true});
 
 /* 20 どちらを選ぶか */
 s=p.addSlide(); bg(s,W); title(s,'どちらを選びますか');
@@ -220,8 +222,8 @@ T(s,'オンラインだけで完結します。\n3ヶ月、6回。\n質問はい
 card(s,5.1,1.45,4.28,2.9,CREAM);
 T(s,'お会いして、一緒にやりたい方',{x:5.4,y:1.72,w:3.7,h:0.4,fontSize:16,bold:true,color:BERRY});
 T(s,'ファッション起業AIマスター講座',{x:5.4,y:2.2,w:3.7,h:0.4,fontSize:14,color:MUTED});
-T(s,'東京で3回、お会いします。\n6ヶ月、オンライン8回。\n事前と事後に、個別に見ます。',
- {x:5.4,y:2.7,w:3.7,h:1.4,fontSize:14,color:INK,lineSpacing:26});
+T(s,'東京で3回、お会いします。\n（オンライン参加もできます）\n6ヶ月、オンライン8回。\n事前と事後に、個別に見ます。',
+ {x:5.4,y:2.62,w:3.7,h:1.7,fontSize:14,color:INK,lineSpacing:25});
 card(s,M,4.5,CW,0.7,SOFT);
 T(s,'迷われたら、個別相談でお聞きします。合わないほうを、はっきり申し上げます。',
  {x:M+0.3,y:4.5,w:CW-0.6,h:0.7,fontSize:14,bold:true,color:BERRY,valign:'middle'});
