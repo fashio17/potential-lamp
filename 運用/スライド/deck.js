@@ -157,20 +157,20 @@ T(s,'1つ目はすぐ書けます。止まるのは、2つ目と3つ目です。
  {x:M+0.3,y:4.2,w:CW-0.6,h:0.75,fontSize:14,color:BERRY,bold:true,lineSpacing:22});
 
 /* 14 SEC03 */
-section('03','講座のご案内','2026年10月13日（火）開講\n講座は2つあります','sec_ny.jpg');
+section('03','講座のご案内','発信から、売れる仕組みまで\n2026年10月13日（火）開講','sec_ny.jpg');
 
 /* 15 学ぶこと */
 s=p.addSlide(); bg(s,W); title(s,'講座で学ぶこと');
-[['AIを中心とした発信の動線設計','撮る・書く・届けるまで'],['ファッション心理学','感性と顧客心理を言葉にする'],['コーチングの基礎','押しつけずに、続く形にする']]
-.forEach((r,i)=>{ const y=1.45+i*1.05; card(s,M,y,CW,0.9); dot(s,M+0.25,y+0.22,i+1);
-  T(s,r[0],{x:M+0.9,y,w:4.3,h:0.9,fontSize:16,bold:true,color:BERRY,valign:'middle'});
-  T(s,r[1],{x:M+5.25,y,w:3.4,h:0.9,fontSize:13,color:INK,valign:'middle'});});
-T(s,'AIは、ゼロから作る道具ではありません。自分の中にあるものを展開する共同制作者です。',
- {x:M,y:4.72,w:CW,h:0.4,fontSize:14,bold:true,color:BERRY});
+[['ファッション心理学','感性と顧客心理を言葉にする'],['AIを使った発信','撮る・書く・届けるまで'],['販売の動線','UTAGEなどで申し込み・決済まで'],['コーチング','押しつけずに、続く形にする']]
+.forEach((r,i)=>{ const y=1.30+i*0.94; card(s,M,y,CW,0.82); dot(s,M+0.25,y+0.18,i+1);
+  T(s,r[0],{x:M+0.9,y,w:4.3,h:0.82,fontSize:16,bold:true,color:BERRY,valign:'middle'});
+  T(s,r[1],{x:M+5.25,y,w:3.4,h:0.82,fontSize:13,color:INK,valign:'middle'});});
+T(s,'三の「販売の動線」は、ファッション起業アカデミア講座で扱います。',
+ {x:M,y:5.08,w:CW,h:0.38,fontSize:14,bold:true,color:BERRY});
 
 /* 16 図解：6ヶ月でつくる動線 */
 s=p.addSlide(); bg(s,W); title(s,'つくるのは、あなたの動線');
-const steps=['撮る','AIで\n言葉にする','編集して\n投稿する','LINEに\n集める','お申し込み'];
+const steps=['撮る','AIで\n言葉にする','編集して\n投稿する','LINEに\n集める','申し込み\n決済'];
 steps.forEach((t,i)=>{ const x=M+i*1.79;
   card(s,x,1.75,1.6,1.5,i===4?CREAM:SOFT);
   s.addShape(p.ShapeType.ellipse,{x:x+0.57,y:1.92,w:0.46,h:0.46,fill:{color:BERRY}});
@@ -178,7 +178,7 @@ steps.forEach((t,i)=>{ const x=M+i*1.79;
   T(s,t,{x:x+0.05,y:2.5,w:1.5,h:0.65,fontSize:13,bold:true,color:BERRY,align:'center',lineSpacing:18});
   if(i<4) s.addShape(p.ShapeType.rightArrow,{x:x+1.63,y:2.38,w:0.14,h:0.22,fill:{color:ROSE}});});
 card(s,M,3.55,CW,1.45,SOFT);
-T(s,'ここまでを、ひとつながりで組み立てます。\n1つでも欠けると、投稿は伸びても、仕事にはつながりません。',
+T(s,'ここまでを、UTAGEなどを使ってひとつながりにします。\n最後の決済まで作って、はじめて収益になります。',
  {x:M+0.35,y:3.55,w:CW-0.7,h:1.45,fontSize:15,color:BERRY,bold:true,valign:'middle',lineSpacing:26});
 
 /* 17 AIが苦手 */
@@ -201,29 +201,29 @@ s=p.addSlide(); bg(s,W); title(s,'講座は2つあります');
 s.addTable([
  [{text:'',options:{fill:{color:W}}},{text:'AIリール講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}},{text:'ファッション起業\nアカデミア講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}}],
  [{text:'期間'},{text:'3ヶ月'},{text:'6ヶ月'}],
+ [{text:'販売の動線づくり'},{text:'—'},{text:'UTAGEなどで申し込み・決済まで'}],
  [{text:'オンライン講座'},{text:'3回（2時間／回）'},{text:'6回（2時間／回）'}],
  [{text:'対面ワークショップ'},{text:'1回'},{text:'6回'}],
  [{text:'質問会'},{text:'2回（2時間／回）'},{text:'6回（2時間／回）'}],
  [{text:'事前の個別サポート'},{text:'1回'},{text:'1回'}],
- [{text:'動画講座'},{text:'見放題'},{text:'見放題'}],
  [{text:'質問し放題'},{text:'チャット'},{text:'チャット＋必要ならZoomも'}],
 ],{x:M,y:1.30,w:CW,colW:[2.3,2.9,3.56],fontSize:11.5,fontFace:F,color:INK,border:{pt:0.5,color:'DDD5D2'},valign:'middle',rowH:0.38,margin:5});
-T(s,'対面ワークショップは10:00-15:00、東京です。アカデミア講座はオンラインでもご参加いただけます。',
+T(s,'動画講座はどちらも見放題。対面ワークショップは10:00-15:00、東京。アカデミア講座はオンラインでも可。',
  {x:M,y:4.62,w:CW,h:0.32,fontSize:11,color:MUTED});
-T(s,'どちらが上ということではありません。関わり方が違います。',
+T(s,'違うのは、どこまで作るかです。',
  {x:M,y:4.96,w:CW,h:0.45,fontSize:14,color:BERRY,bold:true});
 
 /* 20 どちらを選ぶか */
 s=p.addSlide(); bg(s,W); title(s,'どちらを選びますか');
 card(s,M,1.45,4.28,3.0,SOFT);
-T(s,'まず、リールから始めたい方',{x:M+0.3,y:1.72,w:3.7,h:0.4,fontSize:16,bold:true,color:BERRY});
+T(s,'届くところまで、作りたい方',{x:M+0.3,y:1.72,w:3.7,h:0.4,fontSize:16,bold:true,color:BERRY});
 T(s,'AIリール講座',{x:M+0.3,y:2.2,w:3.7,h:0.4,fontSize:14,color:MUTED});
-T(s,'3ヶ月。オンライン3回と、\n対面ワークショップが1回。\n質問は、チャットでお受けします。',
+T(s,'3ヶ月。リールを作れるように。\nオンライン3回と対面1回。\n質問は、チャットでお受けします。',
  {x:M+0.3,y:2.68,w:3.7,h:1.5,fontSize:14,color:INK,lineSpacing:26});
 card(s,5.1,1.45,4.28,3.0,CREAM);
-T(s,'仕事の形まで作りたい方',{x:5.4,y:1.72,w:3.7,h:0.4,fontSize:16,bold:true,color:BERRY});
+T(s,'売れるところまで、作りたい方',{x:5.4,y:1.72,w:3.7,h:0.4,fontSize:16,bold:true,color:BERRY});
 T(s,'ファッション起業アカデミア講座',{x:5.4,y:2.2,w:3.8,h:0.4,fontSize:14,color:MUTED});
-T(s,'6ヶ月。毎月お会いします。\n対面は東京、オンラインも可。\n必要なら、Zoomでもお受けします。',
+T(s,'6ヶ月。UTAGEなどを使って、\n申し込みと決済まで作ります。\n必要なら、Zoomでもお受けします。',
  {x:5.4,y:2.68,w:3.7,h:1.5,fontSize:14,color:INK,lineSpacing:26});
 card(s,M,4.6,CW,0.7,SOFT);
 T(s,'迷われたら、そのままおっしゃってください。合わないほうを、はっきり申し上げます。',
