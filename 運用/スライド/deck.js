@@ -199,7 +199,7 @@ T(s,'当てはまる方は、今日は見送ってください。',{x:M,y:4.35,w
 /* 19 2つの講座 */
 s=p.addSlide(); bg(s,W); title(s,'講座は2つあります');
 s.addTable([
- [{text:'',options:{fill:{color:W}}},{text:'AIリール講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}},{text:'ファッション起業\nAIマスター講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}}],
+ [{text:'',options:{fill:{color:W}}},{text:'AIリール講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}},{text:'ファッション起業\nアカデミア講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}}],
  [{text:'期間'},{text:'3ヶ月'},{text:'6ヶ月'}],
  [{text:'オンライン講座'},{text:'3回（2時間／回）'},{text:'6回（2時間／回）'}],
  [{text:'対面ワークショップ'},{text:'1回'},{text:'6回'}],
@@ -208,7 +208,7 @@ s.addTable([
  [{text:'動画講座'},{text:'見放題'},{text:'見放題'}],
  [{text:'質問し放題'},{text:'チャット'},{text:'チャット＋必要ならZoomも'}],
 ],{x:M,y:1.30,w:CW,colW:[2.3,2.9,3.56],fontSize:11.5,fontFace:F,color:INK,border:{pt:0.5,color:'DDD5D2'},valign:'middle',rowH:0.38,margin:5});
-T(s,'対面ワークショップは10:00-15:00、東京です。マスター講座はオンラインでもご参加いただけます。',
+T(s,'対面ワークショップは10:00-15:00、東京です。アカデミア講座はオンラインでもご参加いただけます。',
  {x:M,y:4.62,w:CW,h:0.32,fontSize:11,color:MUTED});
 T(s,'どちらが上ということではありません。関わり方が違います。',
  {x:M,y:4.96,w:CW,h:0.45,fontSize:14,color:BERRY,bold:true});
@@ -222,7 +222,7 @@ T(s,'3ヶ月。オンライン3回と、\n対面ワークショップが1回。\
  {x:M+0.3,y:2.68,w:3.7,h:1.5,fontSize:14,color:INK,lineSpacing:26});
 card(s,5.1,1.45,4.28,3.0,CREAM);
 T(s,'仕事の形まで作りたい方',{x:5.4,y:1.72,w:3.7,h:0.4,fontSize:16,bold:true,color:BERRY});
-T(s,'ファッション起業AIマスター講座',{x:5.4,y:2.2,w:3.8,h:0.4,fontSize:14,color:MUTED});
+T(s,'ファッション起業アカデミア講座',{x:5.4,y:2.2,w:3.8,h:0.4,fontSize:14,color:MUTED});
 T(s,'6ヶ月。毎月お会いします。\n対面は東京、オンラインも可。\n必要なら、Zoomでもお受けします。',
  {x:5.4,y:2.68,w:3.7,h:1.5,fontSize:14,color:INK,lineSpacing:26});
 card(s,M,4.6,CW,0.7,SOFT);
@@ -237,7 +237,7 @@ T(s,'220,000円',{x:M+0.3,y:2.05,w:3.7,h:0.7,fontSize:34,bold:true,color:BERRY})
 T(s,'3ヶ月／定員10名',{x:M+0.3,y:2.88,w:3.7,h:0.32,fontSize:14,color:MUTED});
 T(s,'お支払いは一括です',{x:M+0.3,y:3.28,w:3.7,h:0.32,fontSize:13,color:INK});
 card(s,5.1,1.45,4.28,2.35,CREAM);
-T(s,'ファッション起業AIマスター講座',{x:5.4,y:1.66,w:3.8,h:0.32,fontSize:14,bold:true,color:BERRY});
+T(s,'ファッション起業アカデミア講座',{x:5.4,y:1.66,w:3.8,h:0.32,fontSize:14,bold:true,color:BERRY});
 T(s,'660,000円',{x:5.4,y:2.05,w:3.7,h:0.7,fontSize:34,bold:true,color:BERRY});
 T(s,'6ヶ月／定員10名',{x:5.4,y:2.88,w:3.7,h:0.32,fontSize:14,color:MUTED});
 T(s,'お支払いは一括です',{x:5.4,y:3.28,w:3.7,h:0.32,fontSize:13,color:INK});

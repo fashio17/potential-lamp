@@ -4,6 +4,17 @@
  https://utage-system.com/p/l00UUhESaHVg
  2026/9/13 作成
 
+ 【2026/9/13 追記】
+ このHTMLは、UTAGEのページに **すべて反映済み** です。
+ 貼り付けは不要になりました。控えとして残してあります。
+
+ 反映のしかた（次に同じ作業をするClaudeへ）
+ 　funnel_page_update で elements を送るとき、**本文の日本語をそのまま入れると
+ 　必ず弾かれます。** 日本語を数値文字参照（&#12354; の形）に変換すると通ります。
+ 　　python3 -c "print(''.join(c if ord(c)<128 else '&#%d;'%ord(c) for c in HTML))"
+ 　あわせて、変更しないセクションは children を省いて
+ 　{"type":"section","background_color":"#FFFFFF","element_id":N} だけ送ること。
+
  【いまのページの状態】
  ・背景はすべて白にしました（ベタ塗りの帯は消えています）
  ・新しい体裁のCSSも入れました（明朝・大きめの字・罫線だけ）
@@ -82,7 +93,7 @@
 <tr>
 <th style="padding:14px 8px;border-bottom:1px solid #A26769;text-align:left;width:32%;font-weight:500;color:#6A5A5E"></th>
 <th style="padding:14px 8px;border-bottom:1px solid #A26769;text-align:left;font-weight:500;color:#6D2E46">AIリール講座</th>
-<th style="padding:14px 8px;border-bottom:1px solid #A26769;text-align:left;font-weight:500;color:#6D2E46">ファッション起業<br>AIマスター講座</th>
+<th style="padding:14px 8px;border-bottom:1px solid #A26769;text-align:left;font-weight:500;color:#6D2E46">ファッション起業<br>アカデミア講座</th>
 </tr>
 <tr><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2;color:#6A5A5E">期間</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">3ヶ月</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">6ヶ月</td></tr>
 <tr><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2;color:#6A5A5E">オンライン講座</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">3回</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">6回</td></tr>
@@ -92,7 +103,7 @@
 <tr><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2;color:#6A5A5E">動画講座</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">見放題</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">見放題</td></tr>
 <tr><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2;color:#6A5A5E">質問し放題</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">チャット</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">チャット＋必要ならZoomも</td></tr>
 </table>
-<p class="sm">オンライン講座と質問会は、1回2時間です。<br>対面ワークショップは10:00-15:00、東京。マスター講座はオンラインでもご参加いただけます。</p>
+<p class="sm">オンライン講座と質問会は、1回2時間です。<br>対面ワークショップは10:00-15:00、東京。アカデミア講座はオンラインでもご参加いただけます。</p>
 
 <h2>受講料</h2>
 <div class="bx">
@@ -101,7 +112,7 @@
 <p class="sm" style="margin:0">3ヶ月／定員10名／お支払いは一括です</p>
 </div>
 <div class="bx">
-<h3>ファッション起業AIマスター講座</h3>
+<h3>ファッション起業アカデミア講座</h3>
 <p class="pr">660,000円</p>
 <p class="sm" style="margin:0">6ヶ月／定員10名／お支払いは一括です</p>
 </div>
@@ -134,11 +145,11 @@
 <p class="q">発信するようなネタがありません</p>
 <p>いちばん多いご質問です。ないのではなく、言葉になっていないだけのことがほとんどです。そこをほどくのが、この講座の中心です。</p>
 <p class="q">東京に行けません</p>
-<p>マスター講座の対面ワークショップは東京ですが、オンラインでのご参加も選べます。</p>
+<p>アカデミア講座の対面ワークショップは東京ですが、オンラインでのご参加も選べます。</p>
 <p class="q">出られない回があります</p>
 <p>動画講座が見放題です。出られない回は、そちらで追っていただけます。</p>
 <p class="q">どちらの講座がいいか決められません</p>
-<p>まずリールから始めたい方はAIリール講座、仕事の形まで作りたい方はマスター講座です。迷われたらご相談ください。</p>
+<p>まずリールから始めたい方はAIリール講座、仕事の形まで作りたい方はアカデミア講座です。迷われたらご相談ください。</p>
 <p class="q">顔出しは必要ですか</p>
 <p>必要ありません。</p>
 
