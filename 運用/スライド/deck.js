@@ -235,12 +235,12 @@ card(s,M,1.45,4.28,2.35,SOFT);
 T(s,'AIリール講座',{x:M+0.3,y:1.66,w:3.7,h:0.32,fontSize:14,bold:true,color:BERRY});
 T(s,'220,000円',{x:M+0.3,y:2.05,w:3.7,h:0.7,fontSize:34,bold:true,color:BERRY});
 T(s,'3ヶ月／定員10名',{x:M+0.3,y:2.88,w:3.7,h:0.32,fontSize:14,color:MUTED});
-T(s,'一括／分割もできます',{x:M+0.3,y:3.28,w:3.7,h:0.32,fontSize:13,color:INK});
+T(s,'お支払いは一括です',{x:M+0.3,y:3.28,w:3.7,h:0.32,fontSize:13,color:INK});
 card(s,5.1,1.45,4.28,2.35,CREAM);
 T(s,'ファッション起業AIマスター講座',{x:5.4,y:1.66,w:3.8,h:0.32,fontSize:14,bold:true,color:BERRY});
 T(s,'660,000円',{x:5.4,y:2.05,w:3.7,h:0.7,fontSize:34,bold:true,color:BERRY});
 T(s,'6ヶ月／定員10名',{x:5.4,y:2.88,w:3.7,h:0.32,fontSize:14,color:MUTED});
-T(s,'一括／分割もできます',{x:5.4,y:3.28,w:3.7,h:0.32,fontSize:13,color:INK});
+T(s,'お支払いは一括です',{x:5.4,y:3.28,w:3.7,h:0.32,fontSize:13,color:INK});
 T(s,'金額を伏せたままお集めしたくないので、この場で全部お伝えしました。\n今日お決めいただく必要はありません。',
  {x:M,y:4.0,w:CW,h:1.0,fontSize:14,color:INK,lineSpacing:26});
 
