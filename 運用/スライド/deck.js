@@ -199,53 +199,54 @@ T(s,'当てはまる方は、今日は見送ってください。',{x:M,y:4.35,w
 /* 19 2つの講座 */
 s=p.addSlide(); bg(s,W); title(s,'講座は2つあります');
 s.addTable([
- [{text:'',options:{fill:{color:W}}},{text:'AIマーケティング\n集中講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}},{text:'ファッション起業\nAIマスター講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}}],
+ [{text:'',options:{fill:{color:W}}},{text:'AIリール講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}},{text:'ファッション起業\nAIマスター講座',options:{bold:true,color:W,fill:{color:BERRY},align:'center'}}],
  [{text:'期間'},{text:'3ヶ月'},{text:'6ヶ月'}],
- [{text:'オンライン講座'},{text:'6回（60分／回）'},{text:'8回（90分／回）'}],
- [{text:'対面ワークショップ'},{text:'—'},{text:'3回（東京・オンライン可）'}],
- [{text:'個別のサポート'},{text:'個別面談 1回'},{text:'事前・事後の個別サポート'}],
- [{text:'質問'},{text:'質問し放題'},{text:'チャットサポート'}],
- [{text:'会員サイト'},{text:'あり'},{text:'あり'}],
-],{x:M,y:1.4,w:CW,colW:[2.3,2.9,3.56],fontSize:12,fontFace:F,color:INK,border:{pt:0.5,color:'DDD5D2'},valign:'middle',rowH:0.42,margin:6});
-T(s,'対面ワークショップは1回3時間程度。東京に来られない方は、オンラインでご参加いただけます。',
- {x:M,y:4.66,w:CW,h:0.32,fontSize:11,color:MUTED});
+ [{text:'オンライン講座'},{text:'3回（2時間／回）'},{text:'6回（2時間／回）'}],
+ [{text:'対面ワークショップ'},{text:'1回'},{text:'6回'}],
+ [{text:'質問会'},{text:'2回（2時間／回）'},{text:'6回（2時間／回）'}],
+ [{text:'事前の個別サポート'},{text:'1回'},{text:'1回'}],
+ [{text:'動画講座'},{text:'見放題'},{text:'見放題'}],
+ [{text:'質問し放題'},{text:'チャット'},{text:'チャット＋必要ならZoomも'}],
+],{x:M,y:1.30,w:CW,colW:[2.3,2.9,3.56],fontSize:11.5,fontFace:F,color:INK,border:{pt:0.5,color:'DDD5D2'},valign:'middle',rowH:0.38,margin:5});
+T(s,'対面ワークショップは10:00-15:00、東京です。マスター講座はオンラインでもご参加いただけます。',
+ {x:M,y:4.62,w:CW,h:0.32,fontSize:11,color:MUTED});
 T(s,'どちらが上ということではありません。関わり方が違います。',
- {x:M,y:5.00,w:CW,h:0.45,fontSize:14,color:BERRY,bold:true});
+ {x:M,y:4.96,w:CW,h:0.45,fontSize:14,color:BERRY,bold:true});
 
 /* 20 どちらを選ぶか */
 s=p.addSlide(); bg(s,W); title(s,'どちらを選びますか');
-card(s,M,1.45,4.28,2.9,SOFT);
-T(s,'まず、ご自分で進めたい方',{x:M+0.3,y:1.72,w:3.7,h:0.4,fontSize:16,bold:true,color:BERRY});
-T(s,'AIマーケティング集中講座',{x:M+0.3,y:2.2,w:3.7,h:0.4,fontSize:14,color:MUTED});
-T(s,'オンラインだけで完結します。\n3ヶ月、6回。\n質問はいつでもしてください。',
- {x:M+0.3,y:2.7,w:3.7,h:1.4,fontSize:14,color:INK,lineSpacing:26});
-card(s,5.1,1.45,4.28,2.9,CREAM);
-T(s,'お会いして、一緒にやりたい方',{x:5.4,y:1.72,w:3.7,h:0.4,fontSize:16,bold:true,color:BERRY});
-T(s,'ファッション起業AIマスター講座',{x:5.4,y:2.2,w:3.7,h:0.4,fontSize:14,color:MUTED});
-T(s,'東京で3回、お会いします。\n（オンライン参加もできます）\n6ヶ月、オンライン8回。\n事前と事後に、個別に見ます。',
- {x:5.4,y:2.62,w:3.7,h:1.7,fontSize:14,color:INK,lineSpacing:25});
-card(s,M,4.5,CW,0.7,SOFT);
-T(s,'マスター講座は定員10名です。詳しいご案内は、個別相談でお話ししています。',
- {x:M+0.3,y:4.5,w:CW-0.6,h:0.7,fontSize:14,bold:true,color:BERRY,valign:'middle'});
+card(s,M,1.45,4.28,3.0,SOFT);
+T(s,'まず、リールから始めたい方',{x:M+0.3,y:1.72,w:3.7,h:0.4,fontSize:16,bold:true,color:BERRY});
+T(s,'AIリール講座',{x:M+0.3,y:2.2,w:3.7,h:0.4,fontSize:14,color:MUTED});
+T(s,'3ヶ月。オンライン3回と、\n対面ワークショップが1回。\n質問は、チャットでお受けします。',
+ {x:M+0.3,y:2.68,w:3.7,h:1.5,fontSize:14,color:INK,lineSpacing:26});
+card(s,5.1,1.45,4.28,3.0,CREAM);
+T(s,'仕事の形まで作りたい方',{x:5.4,y:1.72,w:3.7,h:0.4,fontSize:16,bold:true,color:BERRY});
+T(s,'ファッション起業AIマスター講座',{x:5.4,y:2.2,w:3.8,h:0.4,fontSize:14,color:MUTED});
+T(s,'6ヶ月。毎月お会いします。\n対面は東京、オンラインも可。\n必要なら、Zoomでもお受けします。',
+ {x:5.4,y:2.68,w:3.7,h:1.5,fontSize:14,color:INK,lineSpacing:26});
+card(s,M,4.6,CW,0.7,SOFT);
+T(s,'迷われたら、そのままおっしゃってください。合わないほうを、はっきり申し上げます。',
+ {x:M+0.3,y:4.6,w:CW-0.6,h:0.7,fontSize:14,bold:true,color:BERRY,valign:'middle'});
 
 /* 21 受講料 */
 s=p.addSlide(); bg(s,W); title(s,'受講料');
 card(s,M,1.45,4.28,2.35,SOFT);
-T(s,'AIマーケティング集中講座',{x:M+0.3,y:1.66,w:3.7,h:0.32,fontSize:14,bold:true,color:BERRY});
-T(s,'88,000円',{x:M+0.3,y:2.05,w:3.7,h:0.7,fontSize:34,bold:true,color:BERRY});
-T(s,'3ヶ月／定員20名',{x:M+0.3,y:2.88,w:3.7,h:0.32,fontSize:14,color:MUTED});
-T(s,'お支払いは一括です',{x:M+0.3,y:3.28,w:3.7,h:0.32,fontSize:13,color:INK});
+T(s,'AIリール講座',{x:M+0.3,y:1.66,w:3.7,h:0.32,fontSize:14,bold:true,color:BERRY});
+T(s,'220,000円',{x:M+0.3,y:2.05,w:3.7,h:0.7,fontSize:34,bold:true,color:BERRY});
+T(s,'3ヶ月／定員10名',{x:M+0.3,y:2.88,w:3.7,h:0.32,fontSize:14,color:MUTED});
+T(s,'一括／分割もできます',{x:M+0.3,y:3.28,w:3.7,h:0.32,fontSize:13,color:INK});
 card(s,5.1,1.45,4.28,2.35,CREAM);
 T(s,'ファッション起業AIマスター講座',{x:5.4,y:1.66,w:3.8,h:0.32,fontSize:14,bold:true,color:BERRY});
-T(s,'受講料は、個別相談で\nお伝えしています',{x:5.4,y:2.02,w:3.7,h:0.8,fontSize:19,bold:true,color:BERRY,lineSpacing:30});
+T(s,'660,000円',{x:5.4,y:2.05,w:3.7,h:0.7,fontSize:34,bold:true,color:BERRY});
 T(s,'6ヶ月／定員10名',{x:5.4,y:2.88,w:3.7,h:0.32,fontSize:14,color:MUTED});
-T(s,'分割のお支払いもできます',{x:5.4,y:3.28,w:3.7,h:0.32,fontSize:13,color:INK});
-T(s,'集中講座の金額は、この場ではっきりお伝えしました。\nマスター講座は人数が少ないので、個別にお話ししています。今日お決めいただく必要はありません。',
+T(s,'一括／分割もできます',{x:5.4,y:3.28,w:3.7,h:0.32,fontSize:13,color:INK});
+T(s,'金額を伏せたままお集めしたくないので、この場で全部お伝えしました。\n今日お決めいただく必要はありません。',
  {x:M,y:4.0,w:CW,h:1.0,fontSize:14,color:INK,lineSpacing:26});
 
 /* 22 定員と締切 */
 s=p.addSlide(); bg(s,W); title(s,'定員と締切');
-[['お申し込み締切','2026年10月12日（月）'],['開講','2026年10月13日（火）'],['定員','AIマーケティング集中講座 20名／ファッション起業AIマスター講座 10名']]
+[['お申し込み締切','2026年10月12日（月）'],['開講','2026年10月13日（火）'],['定員','どちらも10名']]
 .forEach((r,i)=>{ const y=1.5+i*1.0; card(s,M,y,CW,0.85);
   T(s,r[0],{x:M+0.35,y,w:2.6,h:0.85,fontSize:15,bold:true,color:MUTED,valign:'middle'});
   T(s,r[1],{x:M+3.1,y,w:CW-3.5,h:0.85,fontSize:15,bold:true,color:BERRY,valign:'middle'});});
@@ -254,16 +255,16 @@ T(s,'締切の翌日が開講です。お手続きの都合がある方は、早
 
 /* 23 欠席 */
 s=p.addSlide(); bg(s,W); title(s,'出られない回があっても大丈夫です');
-['会員サイトがあります。動画の教材も順次増えています','欠席された回は、アーカイブでご覧いただけます','ファッション起業AIマスター講座の方は、個別サポートでおぎないます']
+['会員サイトがあります。動画講座は見放題です','出られない回は、動画で追っていただけます','ご質問は、いつでもチャットでお受けします']
 .forEach((t,i)=>{ const y=1.55+i*0.85; dot(s,M,y,i+1); T(s,t,{x:M+0.75,y:y+0.05,w:CW-0.9,h:0.4,fontSize:15,color:INK});});
 card(s,M,4.15,CW,0.95,CREAM);
-T(s,'6ヶ月のあいだには、どうしても出られない回が出てくると思います。',
+T(s,'講座のあいだには、どうしても出られない回が出てくると思います。',
  {x:M+0.3,y:4.15,w:CW-0.6,h:0.95,fontSize:15,bold:true,color:BERRY,valign:'middle'});
 
-/* 24 今日決めなくていい */
+/* 24 迷われている方へ */
 s=p.addSlide(); bg(s,BERRY);
-T(s,'今日、お決めいただかなくて大丈夫です',{x:M,y:1.5,w:CW,h:0.8,fontSize:27,bold:true,color:W});
-T(s,'迷われている方には、個別相談をご用意しています。\n1対1で、合うかどうかを一緒に見る時間です。無料です。\n\n合わなければ、見送ってくださってかまいません。',
+T(s,'迷われている方へ',{x:M,y:1.5,w:CW,h:0.8,fontSize:27,bold:true,color:W});
+T(s,'この場でご質問いただければ、そのままお答えします。\n個別にお話ししたい方には、1対1の時間もご用意しています。無料です。\n\n合わなければ、見送ってくださってかまいません。',
  {x:M,y:2.5,w:CW,h:1.8,fontSize:16,color:CREAM,lineSpacing:30});
 s.addNotes('申し込みのURLと個別相談のURLを、チャットに貼る。');
 
