@@ -239,14 +239,14 @@ T(s,'お支払いは一括です',{x:M+0.3,y:3.28,w:3.7,h:0.32,fontSize:13,color
 card(s,5.1,1.45,4.28,2.35,CREAM);
 T(s,'ファッション起業アカデミア講座',{x:5.4,y:1.66,w:3.8,h:0.32,fontSize:14,bold:true,color:BERRY});
 T(s,'660,000円',{x:5.4,y:2.05,w:3.7,h:0.7,fontSize:34,bold:true,color:BERRY});
-T(s,'6ヶ月／定員10名',{x:5.4,y:2.88,w:3.7,h:0.32,fontSize:14,color:MUTED});
+T(s,'6ヶ月／定員3名',{x:5.4,y:2.88,w:3.7,h:0.32,fontSize:14,color:MUTED});
 T(s,'お支払いは一括です',{x:5.4,y:3.28,w:3.7,h:0.32,fontSize:13,color:INK});
 T(s,'金額を伏せたままお集めしたくないので、この場で全部お伝えしました。\n今日お決めいただく必要はありません。',
  {x:M,y:4.0,w:CW,h:1.0,fontSize:14,color:INK,lineSpacing:26});
 
 /* 22 定員と締切 */
 s=p.addSlide(); bg(s,W); title(s,'定員と締切');
-[['お申し込み締切','2026年10月12日（月）'],['開講','2026年10月13日（火）'],['定員','どちらも10名']]
+[['お申し込み締切','2026年10月12日（月）'],['開講','2026年10月13日（火）'],['定員','AIリール講座 10名／アカデミア講座 3名']]
 .forEach((r,i)=>{ const y=1.5+i*1.0; card(s,M,y,CW,0.85);
   T(s,r[0],{x:M+0.35,y,w:2.6,h:0.85,fontSize:15,bold:true,color:MUTED,valign:'middle'});
   T(s,r[1],{x:M+3.1,y,w:CW-3.5,h:0.85,fontSize:15,bold:true,color:BERRY,valign:'middle'});});
