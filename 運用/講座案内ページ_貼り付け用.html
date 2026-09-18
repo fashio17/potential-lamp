@@ -1,0 +1,182 @@
+<!--
+============================================================
+ 講座案内ページ（2026年10月期・2講座）
+ https://utage-system.com/p/l00UUhESaHVg
+ 2026/9/13 作成
+
+ 【2026/9/13 追記】
+ このHTMLは、UTAGEのページに **すべて反映済み** です。
+ 貼り付けは不要になりました。控えとして残してあります。
+
+ 反映のしかた（次に同じ作業をするClaudeへ）
+ 　funnel_page_update で elements を送るとき、**本文の日本語をそのまま入れると
+ 　必ず弾かれます。** 日本語を数値文字参照（&#12354; の形）に変換すると通ります。
+ 　　python3 -c "print(''.join(c if ord(c)<128 else '&#%d;'%ord(c) for c in HTML))"
+ 　あわせて、変更しないセクションは children を省いて
+ 　{"type":"section","background_color":"#FFFFFF","element_id":N} だけ送ること。
+
+ 【いまのページの状態】
+ ・背景はすべて白にしました（ベタ塗りの帯は消えています）
+ ・新しい体裁のCSSも入れました（明朝・大きめの字・罫線だけ）
+ ・**本文だけが古いまま残っています。**
+   いちばん上と最下部は白地に白文字なので、いまは読めません。
+   下の6ブロックで置き換えると、そろいます。
+
+ 【使い方】
+ UTAGEのページ編集で、テキスト（HTML）の中身を上から順に置き換えてください。
+ クラス名（w / rl / lb / dt / bx / pr / q / sm / hr / bt / ct）は
+ ページのCSSに入れてあるので、このまま貼るだけで効きます。
+
+ ■ ブロック1 … いちばん上（見出し）
+ ■ ブロック2 … こんな方へ／考え方／学ぶこと
+ ■ ブロック3 … 2つの講座と受講料
+ ■ ブロック4 … 向いていない方／よくあるご質問
+ ■ ブロック5 … 「お申し込み」の見出し（決済フォームの真上）
+ ■ ブロック6 … いちばん下（フッター）※白地用に文字色を直してあります
+
+ 【決済フォームは触らないでください】
+ 決済は2026/9/13に660,000円・220,000円で設定済みです（どちらも一括）。
+============================================================
+-->
+
+
+<!-- ============ ブロック1 ここから ============ -->
+<div class="w" style="padding:58px 6px 6px">
+<div class="rl"></div>
+<p class="lb">ファッション起業アカデミア</p>
+<h1>50代から、<br>今ある資格と人生経験を、<br>続く仕事に変える。</h1>
+<p>ファッション心理学。AIを使った発信の動線設計。コーチング。<br>2026年10月から、講座を2つひらきます。</p>
+<div class="dt">2026年10月13日（火）開講<br>お申し込み締切　10月12日（月）</div>
+</div>
+<!-- ============ ブロック1 ここまで ============ -->
+
+
+<!-- ============ ブロック2 ここから ============ -->
+<div class="w">
+<h2>こんな方へ</h2>
+<ul>
+<li>資格も経験もあるのに、それが仕事につながっていない方</li>
+<li>発信したいけれど、何を書けばいいのか分からない方</li>
+<li>AIを使ってみたいけれど、どこから触ればいいのか分からない方</li>
+<li>自分の言葉で、自分のお客さまに届けたい方</li>
+</ul>
+
+<h2>この講座の考え方</h2>
+<p>AIは、ゼロから何かを作る道具ではありません。<br>自分の中にすでにあるものを、投稿文や画像や教材に展開してくれる共同制作者です。</p>
+<p>素材は、あなたの人生の中にあります。<br>やるのは、それを取り出して、言葉にして、届く形にすることです。</p>
+
+<h2>学ぶこと</h2>
+<div class="bx">
+<h3>一　ファッション心理学</h3>
+<p class="sm" style="margin:0 0 22px">自分の感性と、お客さまの心理を、言葉にする。</p>
+<h3>二　AIを使った発信の動線設計</h3>
+<p class="sm" style="margin:0 0 22px">撮る・書く・届けるまでを、ひとつながりで組み立てる。</p>
+<h3>三　コーチング</h3>
+<p class="sm" style="margin:0">押しつけずに、続く形にする。</p>
+</div>
+
+<h2>AIが苦手でも大丈夫です</h2>
+<p>AIが苦手な方には、使わないやり方もお伝えします。</p>
+<p>ただ、正直に申し上げます。動線を作る作業は、AIを使ったほうが圧倒的に楽です。</p>
+<p>好きになる必要はありません。使えるところだけ使ってください。</p>
+</div>
+<!-- ============ ブロック2 ここまで ============ -->
+
+
+<!-- ============ ブロック3 ここから ============ -->
+<div class="w">
+<div class="hr"></div>
+<h2>講座は2つあります</h2>
+<p>違うのは、関わり方です。<br>回数だけではありません。<strong>ご質問を、チャットでお受けするか、必要ならZoomまでお受けするか。</strong></p>
+
+<table style="width:100%;border-collapse:collapse;font-size:16px;line-height:1.9;margin:0 0 14px">
+<tr>
+<th style="padding:14px 8px;border-bottom:1px solid #A26769;text-align:left;width:32%;font-weight:500;color:#6A5A5E"></th>
+<th style="padding:14px 8px;border-bottom:1px solid #A26769;text-align:left;font-weight:500;color:#6D2E46">AIリール講座</th>
+<th style="padding:14px 8px;border-bottom:1px solid #A26769;text-align:left;font-weight:500;color:#6D2E46">ファッション起業<br>アカデミア講座</th>
+</tr>
+<tr><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2;color:#6A5A5E">期間</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">3ヶ月</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">6ヶ月</td></tr>
+<tr><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2;color:#6A5A5E">オンライン講座</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">3回</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">6回</td></tr>
+<tr><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2;color:#6A5A5E">対面ワークショップ</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">1回</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">6回</td></tr>
+<tr><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2;color:#6A5A5E">質問会</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">2回</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">6回</td></tr>
+<tr><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2;color:#6A5A5E">事前の個別サポート</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">1回</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">1回</td></tr>
+<tr><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2;color:#6A5A5E">動画講座</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">見放題</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">見放題</td></tr>
+<tr><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2;color:#6A5A5E">質問し放題</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">チャット</td><td style="padding:14px 8px;border-bottom:1px solid #E0D6D2">チャット＋必要ならZoomも</td></tr>
+</table>
+<p class="sm">オンライン講座と質問会は、1回2時間です。<br>対面ワークショップは10:00-15:00、東京。アカデミア講座はオンラインでもご参加いただけます。</p>
+
+<h2>受講料</h2>
+<div class="bx">
+<h3>AIリール講座</h3>
+<p class="pr">220,000円</p>
+<p class="sm" style="margin:0">3ヶ月／定員10名／お支払いは一括です</p>
+</div>
+<div class="bx">
+<h3>ファッション起業アカデミア講座</h3>
+<p class="pr">660,000円</p>
+<p class="sm" style="margin:0">6ヶ月／定員3名／お支払いは一括です</p>
+</div>
+<p>どちらが上ということではありません。関わり方が違います。</p>
+
+<h2>お支払いについて</h2>
+<p>このページからは、クレジットカードでお手続きいただけます。</p>
+<p>銀行振込も承っております。<br>ご希望の方は、お申し込みの前に、下のLINEからご連絡ください。</p>
+<p><a class="bt" href="https://lin.ee/5ZCgX2F">LINEでご相談する</a></p>
+</div>
+<!-- ============ ブロック3 ここまで ============ -->
+
+
+<!-- ============ ブロック4 ここから ============ -->
+<div class="w">
+<div class="hr"></div>
+<h2>向いていない方</h2>
+<p>先に、正直にお伝えします。</p>
+<div class="bx">
+<h3>今すぐ収入にしたい方には向きません。</h3>
+<p class="sm" style="margin:0 0 20px">数ヶ月かかります。</p>
+<h3>言われたとおりにやりたい方にも向きません。</h3>
+<p class="sm" style="margin:0">自分の言葉を探す講座です。</p>
+</div>
+<p>当てはまる方は、見送ってください。</p>
+
+<h2>よくあるご質問</h2>
+<p class="q">AIを触ったことがありません</p>
+<p>大丈夫です。特別な操作はしていません。実際に打っている画面を、そのままお見せします。</p>
+<p class="q">発信するようなネタがありません</p>
+<p>いちばん多いご質問です。ないのではなく、言葉になっていないだけのことがほとんどです。そこをほどくのが、この講座の中心です。</p>
+<p class="q">東京に行けません</p>
+<p>アカデミア講座の対面ワークショップは東京ですが、オンラインでのご参加も選べます。</p>
+<p class="q">出られない回があります</p>
+<p>動画講座が見放題です。出られない回は、そちらで追っていただけます。</p>
+<p class="q">どちらの講座がいいか決められません</p>
+<p>まずリールから始めたい方はAIリール講座、仕事の形まで作りたい方はアカデミア講座です。迷われたらご相談ください。</p>
+<p class="q">顔出しは必要ですか</p>
+<p>必要ありません。</p>
+
+<h2>お申し込みの前に</h2>
+<div class="bx">
+<h3>成果について</h3>
+<p class="sm" style="margin:0 0 22px">この講座は、収入や集客の成果をお約束するものではありません。何をどう進めるかは、おひとりずつ違います。手順と考え方をお伝えし、続けられる形にするところまでを一緒にやります。</p>
+<h3>キャンセルについて</h3>
+<p class="sm" style="margin:0">お申し込み後のキャンセルは、開講日（2026年10月13日）の前日まで承ります。開講後のご返金は承っておりません。日程が合わなくなった場合は、動画講座と個別のご相談で補います。</p>
+</div>
+</div>
+<!-- ============ ブロック4 ここまで ============ -->
+
+
+<!-- ============ ブロック5 ここから ============ -->
+<div class="w ct" style="padding:44px 6px 4px">
+<div class="rl" style="margin:0 auto 26px"></div>
+<h2 style="margin:0 0 16px">お申し込み</h2>
+<p style="margin:0">講座をお選びください。<br>お申し込み締切は2026年10月12日（月）です。</p>
+</div>
+<!-- ============ ブロック5 ここまで ============ -->
+
+
+<!-- ============ ブロック6 ここから（フッター・白地用） ============ -->
+<div class="w" style="padding:40px 6px 30px;border-top:1px solid #E0D6D2">
+<p style="font-size:16px;color:#6D2E46;margin:0 0 8px">ファッション起業アカデミア</p>
+<p class="sm" style="margin:0 0 14px">松岡依里子（ファッション心理学者／大学教授）</p>
+<p class="sm" style="margin:0"><a href="https://utage-system.com/p/mzJYrUwqMaus" style="color:#6D2E46">特定商取引法に基づく表記・プライバシーポリシー</a></p>
+</div>
+<!-- ============ ブロック6 ここまで ============ -->
