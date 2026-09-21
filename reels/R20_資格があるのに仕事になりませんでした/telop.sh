@@ -13,7 +13,7 @@ printf '足りないのは実力ではない'                > $D/4.txt
 printf '誰に向けているかです'                    > $D/5.txt
 printf '決めると選択肢は減ります'                > $D/6.txt
 printf 'でも減らさないと選ばれません'            > $D/7.txt
-printf 'わたしも、そこで止まっていました'        > $D/8.txt
+printf 'わたしも、止まっていました'              > $D/8.txt
 
 ST="fontfile=$FT:fontcolor=white:box=1:boxcolor=black@0.58:boxborderw=26:shadowcolor=black@0.5:shadowx=2:shadowy=2:line_spacing=18:x=(w-tw)/2"
 # $4 に数値を渡すと、その分だけ下にずらす（顔にかかるとき用・2026/9/18の決めごと）
