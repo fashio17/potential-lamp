@@ -194,7 +194,7 @@ courses.forEach(c=>{
   s.addShape(P.ShapeType.line,{x:6.5,y:2.25,w:0,h:2.0,line:{color:RULE,width:1}});
   body(s,7.0,2.2,5.5,c.body,14,INK,25);
   hr(s, 4.85);
-  s.addText('全コース共通　質問し放題（48時間以内）／動画講座の会員サイト見放題／アーカイブ視聴可／セルフコーチング／勉強会へご招待／動画撮影会1回',
+  s.addText('全コース共通　質問し放題（48時間以内）／会員サイト見放題／アーカイブ視聴可／セルフコーチング／受講生の勉強会／動画撮影会1回',
     { x:0.85, y:5.05, w:11.7, h:0.5, fontFace:SANS, fontSize:12, color:BERRY, isTextBox:true, margin:0 });
   s.addText(c.note, { x:0.85, y:5.9, w:11.7, h:0.6, fontFace:SANS, fontSize:15, italic:true, color:MUTE, isTextBox:true, margin:0 });
   s.addNotes(c.name+' の説明。金額は口頭でも必ず言うこと。');
@@ -260,7 +260,7 @@ s.addText('一緒にインスタライブ／アカウント共有でご紹介', 
 s.addText('アメブロ 2,600名／インスタ 8,500名程度にお届けします。', { x:7.2, y:3.2, w:5.3, h:0.4, fontFace:SANS, fontSize:12, color:MUTE, isTextBox:true, margin:0 });
 hr(s, 3.8, 7.2, 5.3);
 s.addText('こちらは、はじめから全コースに入っています', { x:7.2, y:3.95, w:5.3, h:0.4, fontFace:SANS, fontSize:13, bold:true, color:ROSE, isTextBox:true, margin:0 });
-body(s,7.2,4.4,5.3,'質問し放題（48時間以内）／動画講座の会員サイト見放題\nアーカイブ視聴可／セルフコーチング\n勉強会へご招待\n動画撮影会 1回（丸の内・2時間。撮影は卒業生がお手伝いします）',11.5,MUTE,20);
+body(s,7.2,4.4,5.3,'質問し放題（48時間以内）／動画講座の会員サイト見放題\nアーカイブ視聴可／セルフコーチング\n受講生の勉強会へご招待（無料の入口の勉強会とは別のものです）\n動画撮影会 1回（丸の内・2時間。撮影は卒業生がお手伝いします）',11.5,MUTE,20);
 
 s.addText('「1回しかない」ではなく「1日で作りきる」日です。', { x:0.85, y:5.9, w:11.7, h:0.5, fontFace:SANS, fontSize:15, color:MUTE, isTextBox:true, margin:0 });
 
