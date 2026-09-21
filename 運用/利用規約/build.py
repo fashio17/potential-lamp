@@ -25,6 +25,16 @@ p{font-size:15px;line-height:2.05;margin:0 0 13px}
 .hr{width:100%;height:1px;background:#E0D6D2;margin:40px 0}
 a{color:#6D2E46}
 @media(max-width:600px){h1{font-size:22px}h2{font-size:17px}p{font-size:14px}}
+@media print{
+@page{size:A4;margin:20mm 18mm}
+.w{max-width:none;padding:0}
+h1{font-size:20px;margin:0 0 20px}
+h2{font-size:15px;margin:26px 0 8px;page-break-after:avoid;break-after:avoid}
+h3{font-size:14px;margin:14px 0 6px;page-break-after:avoid;break-after:avoid}
+p{font-size:12.5px;line-height:1.85;margin:0 0 9px;orphans:3;widows:3}
+.rl{display:none}
+a{color:#332B29;text-decoration:none}
+}
 </style></head><body><div class="w">
 <div class="rl"></div>
 <h1>__TITLE__</h1>
