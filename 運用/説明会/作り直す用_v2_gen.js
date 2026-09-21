@@ -194,8 +194,8 @@ courses.forEach(c=>{
   s.addShape(P.ShapeType.line,{x:6.5,y:2.25,w:0,h:2.0,line:{color:RULE,width:1}});
   body(s,7.0,2.2,5.5,c.body,14,INK,25);
   hr(s, 4.85);
-  s.addText('全コース共通　質問し放題（48時間以内）／動画講座の会員サイト見放題／アーカイブ視聴可／セルフコーチング／動画撮影会1回',
-    { x:0.85, y:5.05, w:11.7, h:0.5, fontFace:SANS, fontSize:13, color:BERRY, isTextBox:true, margin:0 });
+  s.addText('全コース共通　質問し放題（48時間以内）／動画講座の会員サイト見放題／アーカイブ視聴可／セルフコーチング／勉強会へご招待／動画撮影会1回',
+    { x:0.85, y:5.05, w:11.7, h:0.5, fontFace:SANS, fontSize:12, color:BERRY, isTextBox:true, margin:0 });
   s.addText(c.note, { x:0.85, y:5.9, w:11.7, h:0.6, fontFace:SANS, fontSize:15, italic:true, color:MUTE, isTextBox:true, margin:0 });
   s.addNotes(c.name+' の説明。金額は口頭でも必ず言うこと。');
 });
@@ -254,17 +254,14 @@ s=P.addSlide(); T(s,'対面は「ワークショップ」です','話を聞く�
 s.addText('10:00 - 15:00', { x:0.85, y:2.1, w:5.5, h:0.75, fontFace:SERIF, fontSize:34, bold:true, color:BERRY, isTextBox:true, margin:0 });
 s.addText('＝ 5時間。オンライン3回分を超えます。会場は東京です。', { x:0.85, y:2.9, w:5.5, h:0.4, fontFace:SANS, fontSize:14, color:MUTE, isTextBox:true, margin:0 });
 body(s,0.85,3.4,5.5,'ご案内のページ、申し込みのフォーム、決済まで。\nAIとUTAGEを使って、その場で一緒に作ります。\n\n対面の日は、コースごとに分けません。\nひとりでやると、たいてい途中で止まります。',14,INK,26);
-s.addShape(P.ShapeType.line,{x:6.7,y:2.1,w:0,h:3.3,line:{color:RULE,width:1}});
+s.addShape(P.ShapeType.line,{x:6.7,y:2.1,w:0,h:3.6,line:{color:RULE,width:1}});
 s.addText('今回ご参加の方への特典', { x:7.2, y:2.1, w:5.3, h:0.5, fontFace:SERIF, fontSize:22, bold:true, color:BERRY, isTextBox:true, margin:0 });
-const toku=[['一','一緒にインスタライブ／アカウント共有でご紹介','アメブロ 2,600名／インスタ 8,500名程度'],
-            ['二','勉強会へ無料でご招待',''],
-            ['三','動画撮影会 1回 無料でご招待','丸の内・2時間。撮影は卒業生がお手伝いします']];
-toku.forEach((t,i)=>{
-  const y=2.85+i*0.88;
-  s.addText(t[0], { x:7.2, y:y+0.02, w:0.4, h:0.4, fontFace:SERIF, fontSize:16, bold:true, color:ROSE, isTextBox:true, margin:0 });
-  s.addText(t[1], { x:7.7, y, w:4.8, h:0.4, fontFace:SANS, fontSize:14, bold:true, color:INK, isTextBox:true, margin:0 });
-  if(t[2]) s.addText(t[2], { x:7.7, y:y+0.38, w:4.8, h:0.35, fontFace:SANS, fontSize:11, color:MUTE, isTextBox:true, margin:0 });
-});
+s.addText('一緒にインスタライブ／アカウント共有でご紹介', { x:7.2, y:2.75, w:5.3, h:0.45, fontFace:SANS, fontSize:15, bold:true, color:INK, isTextBox:true, margin:0 });
+s.addText('アメブロ 2,600名／インスタ 8,500名程度にお届けします。', { x:7.2, y:3.2, w:5.3, h:0.4, fontFace:SANS, fontSize:12, color:MUTE, isTextBox:true, margin:0 });
+hr(s, 3.8, 7.2, 5.3);
+s.addText('こちらは、はじめから全コースに入っています', { x:7.2, y:3.95, w:5.3, h:0.4, fontFace:SANS, fontSize:13, bold:true, color:ROSE, isTextBox:true, margin:0 });
+body(s,7.2,4.4,5.3,'質問し放題（48時間以内）／動画講座の会員サイト見放題\nアーカイブ視聴可／セルフコーチング\n勉強会へご招待\n動画撮影会 1回（丸の内・2時間。撮影は卒業生がお手伝いします）',11.5,MUTE,20);
+
 s.addText('「1回しかない」ではなく「1日で作りきる」日です。', { x:0.85, y:5.9, w:11.7, h:0.5, fontFace:SANS, fontSize:15, color:MUTE, isTextBox:true, margin:0 });
 
 /* 19 持って帰るもの */
