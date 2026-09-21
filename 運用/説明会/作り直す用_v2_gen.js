@@ -48,7 +48,7 @@ nums.forEach((n,i)=>{
   s.addText(n[1], { x:4.7, y:y+0.22, w:7.8, h:0.5, fontFace:SANS, fontSize:16, color:INK, isTextBox:true, margin:0 });
   hr(s, y+1.15);
 });
-body(s,0.85,6.8,11.7,'ファッション心理学・コーチング・SNSマーケティングの3つで、ビジネスを立ち上げるところまでをご一緒します。',14,MUTE);
+body(s,0.85,6.8,11.7,'ファッション心理学・コーチング・SNSマーケティングの3つで、ご自分でビジネスを立ち上げられるようになるまでをお手伝いします。',14,MUTE);
 
 /* 4 7つの技 */
 s=P.addSlide(); T(s,'ファッション起業で収益化する7つの技',null);
@@ -88,10 +88,11 @@ body(s,1.2,3.55,5.0,'インスタマーケティング\nファッション心理
 box(s,6.95,2.15,5.6,3.6);
 s.addText('5 〜 6ヶ月', { x:7.3, y:2.45, w:5.0, h:0.55, fontFace:SERIF, fontSize:26, bold:true, color:BERRY, isTextBox:true, margin:0 });
 s.addText('売れる仕組みにする', { x:7.3, y:3.05, w:5.0, h:0.4, fontFace:SANS, fontSize:15, bold:true, color:INK, isTextBox:true, margin:0 });
-body(s,7.3,3.55,5.0,'ファーストキャッシュをとる\nプロモーションの強化\n売れる仕組み化\nビジネスの改善と加速',14,MUTE,24);
+body(s,7.3,3.55,5.0,'はじめての販売に向けて動く\nプロモーションの強化\n売れる仕組み化\nビジネスの改善と加速',14,MUTE,24);
 s.addText('3ヶ月で区切っても構いません。そこまででも、売るものは手元に残ります。', { x:0.85, y:6.1, w:11.7, h:0.5, fontFace:SANS, fontSize:15, color:MUTE, isTextBox:true, margin:0 });
 
-/* 7-10 受講生の声 */
+/* 7-11 受講生の声 */
+const VN=x=>x.addText('成果には個人差があります。特定の成果を保証するものではありません。', { x:0.85, y:6.95, w:11.7, h:0.4, fontFace:SANS, fontSize:11, color:FAINT, isTextBox:true, margin:0 });
 const MO = f => 'image/jpeg;base64,' + fs.readFileSync('/tmp/deck/un_old/ppt/media/'+f).toString('base64');
 function voice(s, x, y, w, name, role, before, after, img, imgW, src){
   s.addText(name, { x, y, w, h:0.4, fontFace:SERIF, fontSize:17, bold:true, color:BERRY, isTextBox:true, margin:0 });
@@ -103,7 +104,7 @@ function voice(s, x, y, w, name, role, before, after, img, imgW, src){
   if(img) s.addImage({ data:(src==='old'?MO(img):M(img)), x:x+w+0.25, y:y+0.15, w:imgW, h:imgW*1.33 });
 }
 
-s=P.addSlide(); T(s,'受講生の声　一','お名前と数字は、ご本人の許可をいただいて載せています。');
+s=P.addSlide(); T(s,'受講生の声　一','お名前と数字は、ご本人の許可をいただいて載せています。'); VN(s);
 voice(s,0.85,2.0,3.3,'船渡恭子 様（50代）','帽子コーディネーター／デザイナー',
  '帽子でビジネスができるのか、不安がいっぱいでした。',
  '帽子ブランドを立ち上げ、オンラインストアを運営。\n初のポップアップショップで7桁を達成。\nフォロワーは5,000から19,000へ。\nライブをすれば必ず売れる状況が続いています。','image17.jpeg',1.75,'new');
@@ -111,7 +112,7 @@ voice(s,6.3,2.0,3.3,'冨永彩心 さん（50代）','ブランディングス�
  '集客は得意でしたが、3,000円の商品は売れても高額が難しく、コーチングを学びました。',
  '30万円程度から7桁に。\nインスタ 7.2万人。\n2024年3月に書籍も出版されました。','image18.jpeg',1.75,'new');
 
-s=P.addSlide(); T(s,'受講生の声　二',null);
+s=P.addSlide(); T(s,'受講生の声　二',null); VN(s);
 voice(s,0.85,2.0,4.6,'元地陽子 様（40代）','神戸・ファッションスタイリスト／セレクトショップ経営',
  'はじめは、何をすれば良いのか分かりませんでした。ファッション心理学とコーチングが必要だと思い、入りました。',
  'アクセサリーブランドを立ち上げ、初月から20万円以上。\nYouTube 4万人以上／インスタ 2.1万人。\nいまはアパレルも作り、ライブで完売しています。\n\n「行動するということが、本当に重要です」',null,0,'new');
@@ -119,7 +120,7 @@ voice(s,7.2,2.0,4.0,'岩高要子 さん','神戸・セレクトショップ3店
  'コロナで来店が減り、独自にインスタをやっていましたが、成果が出ませんでした。',
  'スタッフ全員でインスタ運用を受講。\nインスタ経由の問い合わせと購入が急増し、\n海外からのご注文も。\n売上はコロナ前以上になりました。','image20.jpeg',1.6,'new');
 
-s=P.addSlide(); T(s,'受講生の声　三','「資格はあるのに、仕事にならない」ところから始まった方です。');
+s=P.addSlide(); T(s,'受講生の声　三','「資格はあるのに、仕事にならない」ところから始まった方です。'); VN(s);
 voice(s,0.85,2.0,5.0,'鈴木 様（50代）','魅力開花セールスコーチ／元・会社員',
  'イメージコンサルタントで起業する人が増え、どう差別化するか、プロとしてやっていく自信がないことが悩みでした。（スタイリストやアパレルの経験がなかったので）',
  '自分の経歴と強みを洗い出すうちに、会社員時代の経験を活かした商品が作れると分かりました。\nファッションにこだわらない、新しい商品ができました。\n\n「起業家として出発する土台づくりができました」',null,0,'new');
@@ -127,13 +128,13 @@ voice(s,7.0,2.0,5.4,'石田 様（50代）','ウェルビーイングファッ�
  'ウェルビーイングファッションを広めたいと思っていましたが、ビジネスの方法が分かりませんでした。インスタもLINEもLPも知りませんでした。',
  'ファッション心理学で、感じていたことの裏付けが得られました。\n1DAY講座を一緒に開催し、バックエンドも販売できました。\n商標登録も取られています。',null,0,'new');
 
-s=P.addSlide(); T(s,'受講生の声　四','パートから始めて、いまはご自分のお仕事にされています。');
+s=P.addSlide(); T(s,'受講生の声　四','パートから始めて、いまはご自分のお仕事にされています。'); VN(s);
 s.addImage({ data:M('image22.jpeg'), x:9.5, y:2.1, w:3.0, h:4.0 });
 voice(s,0.85,2.0,7.8,'中島ようこ 様（40代・ママ起業家）','パーソナルスタイリスト（熊本）',
  '起業で何から始めて良いのか分からず、アパレル系の企業でパートとして働いていました。',
  'マスター講座で、コーチング・ファッション心理学・インスタマーケティングを学びました。\n商品を作り、パーソナルスタイリストとしてモニターから始めました。\nフォロワーもLINE登録者も増え、月収は会社員のころを超えました。\nお子さんお二人を育てながら、いまも活動されています。',null,0,'new');
 
-s=P.addSlide(); T(s,'受講生の声　五','短いお声もいただいています。');
+s=P.addSlide(); T(s,'受講生の声　五','短いお声もいただいています。'); VN(s);
 const vs=[['Kさん','服飾大学卒業後 ZARA 勤務／現在フリーデザイナー','最新の情報でびっくりすることが多いです。私の強みに合わせたブランディングをしてくださるので、本当にためになりました。'],
           ['Sさん','スタイリスト／イメージコンサルタント','どんなメニューで展開したらよいのか迷っていましたが、方向性がはっきりしました。商品作りが斬新で、学びに役立ちました。'],
           ['Tさん','セレクトショップ オーナー','コーチングでモチベーションが上がりました。ショップの商品をネットで販売する方法を学び、売上も上がりました。'],
@@ -164,6 +165,20 @@ goals.forEach((g,i)=>{
 });
 s.addNotes('「どれが良い・悪い」ではない。仕事にしたいかどうか、それだけで決まる。');
 
+/* 主体性 */
+s=P.addSlide(); T(s,'この講座は、あなたが主語です','いちばん先に、これをお伝えしておきます。');
+s.addText('発信の内容も、作る商品も、決めるのはご本人です。', { x:0.85, y:2.0, w:11.7, h:0.45, fontFace:SANS, fontSize:16, bold:true, color:INK, isTextBox:true, margin:0 });
+s.addText('この講座でお渡しするのは、考え方と手順です。そして、ご自分で作られたものを見て、お返事をします。', { x:0.85, y:2.45, w:11.7, h:0.45, fontFace:SANS, fontSize:14, color:MUTE, isTextBox:true, margin:0 });
+s.addText('この講座ですること', { x:0.85, y:3.15, w:5.5, h:0.45, fontFace:SERIF, fontSize:20, bold:true, color:BERRY, isTextBox:true, margin:0 });
+body(s,0.85,3.7,5.5,'講義と対面ワークショップ／教材\n動画講座の会員サイト\nご質問へのお返事（48時間以内）\nご自分で作られたものへの助言\n次の一手のご提案',13.5,INK,24);
+s.addShape(P.ShapeType.line,{x:6.7,y:3.15,w:0,h:2.5,line:{color:RULE,width:1}});
+s.addText('この講座ではしないこと', { x:7.2, y:3.15, w:5.3, h:0.45, fontFace:SERIF, fontSize:20, bold:true, color:ROSE, isTextBox:true, margin:0 });
+body(s,7.2,3.7,5.3,'代わりに市場や競合を調べること\n代わりに事業計画や商品企画を立てること\n代わりに投稿・動画・LP・申込ページを作り続けること\n代わりに販売や営業、お客さま対応をすること\n毎日の行動をひとつずつ指示し続けること',13.5,MUTE,24);
+hr(s, 5.95);
+s.addText('手を抜いているのではありません。代わりにやってしまうと、講座が終わったあとに、ご自分では動けなくなるからです。', { x:0.85, y:6.15, w:11.7, h:0.45, fontFace:SANS, fontSize:14, color:INK, isTextBox:true, margin:0 });
+s.addText('目指しているのは、終わったあと、ご自分ひとりで続けられる状態です。くわしくは利用規約に書いています。', { x:0.85, y:6.6, w:11.7, h:0.45, fontFace:SANS, fontSize:14, bold:true, color:BERRY, isTextBox:true, margin:0 });
+s.addNotes('クレームのもとは、ここの見解の違い。金額の話をする前に、必ずこの1枚を出して口頭でも言うこと。「代わりにやること」は規約でも含まれない業務と決めてあります。');
+
 /* 11-13 各コース */
 const courses=[
  {n:'一',name:'はじめてのAI発信インスタ講座',price:'100,000円',tag:'モニター価格',term:'3ヶ月／オンラインのみ',
@@ -177,7 +192,7 @@ const courses=[
  {n:'三',name:'ファッション起業AI活用　マスター講座',price:'550,000円',tag:'定員 5名',term:'6ヶ月／オンライン＋対面',
   rows:[['オンライン講座','計12回（1回90分）'],['対面ワークショップ','2回（各10:00-15:00）'],['合計の時間','28時間']],
   body:'前半の3ヶ月　ファッション心理学を学び、商品をつくる\n後半の3ヶ月　販売の動線をつくり、自動化する\n\nUTAGE・公式LINEを使った申し込みの仕組み、コーチングセールスまで。',
-  note:'伴走する期間が長いので、5名までにしています。'}];
+  note:'お一人ずつに目が届く形にしたいので、5名までにしています。'}];
 courses.forEach(c=>{
   s=P.addSlide();
   s.addText(c.n, { x:0.85, y:0.5, w:0.8, h:0.8, fontFace:SERIF, fontSize:36, bold:true, color:ROSE, isTextBox:true, margin:0 });
@@ -196,6 +211,7 @@ courses.forEach(c=>{
   hr(s, 4.85);
   s.addText('全コース共通　質問し放題（48時間以内）／会員サイト見放題／アーカイブ視聴可／セルフコーチング／受講生の勉強会／動画撮影会1回',
     { x:0.85, y:5.05, w:11.7, h:0.5, fontFace:SANS, fontSize:12, color:BERRY, isTextBox:true, margin:0 });
+  s.addText('質問し放題は、ご自分の実践についてのご質問にお答えするものです。制作の代行は含みません。', { x:0.85, y:5.45, w:11.7, h:0.4, fontFace:SANS, fontSize:11, color:FAINT, isTextBox:true, margin:0 });
   s.addText(c.note, { x:0.85, y:5.9, w:11.7, h:0.6, fontFace:SANS, fontSize:15, italic:true, color:MUTE, isTextBox:true, margin:0 });
   s.addNotes(c.name+' の説明。金額は口頭でも必ず言うこと。');
 });
@@ -253,7 +269,7 @@ s.addNotes('ここがこの説明会でいちばん強い場所。実測の話�
 s=P.addSlide(); T(s,'対面は「ワークショップ」です','話を聞く日ではありません。手を動かして、作る日です。');
 s.addText('10:00 - 15:00', { x:0.85, y:2.1, w:5.5, h:0.75, fontFace:SERIF, fontSize:34, bold:true, color:BERRY, isTextBox:true, margin:0 });
 s.addText('＝ 5時間。オンライン3回分を超えます。会場は東京です。', { x:0.85, y:2.9, w:5.5, h:0.4, fontFace:SANS, fontSize:14, color:MUTE, isTextBox:true, margin:0 });
-body(s,0.85,3.4,5.5,'ご案内のページ、申し込みのフォーム、決済まで。\nAIとUTAGEを使って、その場で一緒に作ります。\n\n対面の日は、コースごとに分けません。\nひとりでやると、たいてい途中で止まります。',14,INK,26);
+body(s,0.85,3.4,5.5,'ご案内のページ、申し込みのフォーム、決済まで。\nAIとUTAGEを使って、ご自分の手で作っていただきます。\n操作でつまずいたところは、その場でお手伝いします。\n\n対面の日は、コースごとに分けません。',14,INK,26);
 s.addShape(P.ShapeType.line,{x:6.7,y:2.1,w:0,h:3.6,line:{color:RULE,width:1}});
 s.addText('今回ご参加の方への特典', { x:7.2, y:2.1, w:5.3, h:0.5, fontFace:SERIF, fontSize:22, bold:true, color:BERRY, isTextBox:true, margin:0 });
 s.addText('一緒にインスタライブ／アカウント共有でご紹介', { x:7.2, y:2.75, w:5.3, h:0.45, fontFace:SANS, fontSize:15, bold:true, color:INK, isTextBox:true, margin:0 });
@@ -305,13 +321,13 @@ body(s,0.85,6.0,11.7,'お支払いは一括（クレジットカード／銀行�
 /* 22 向いていない方 */
 s=P.addSlide(); T(s,'先に、正直にお伝えします',null);
 s.addText('向いていない方', { x:0.85, y:2.0, w:5.5, h:0.5, fontFace:SERIF, fontSize:22, bold:true, color:BERRY, isTextBox:true, margin:0 });
-body(s,0.85,2.65,5.5,'今すぐ収入にしたい方\n言われたとおりにやりたい方',15,INK,30);
-s.addText('自分の言葉を探す講座です。当てはまる方は、見送ってください。', { x:0.85, y:3.75, w:5.5, h:0.6, fontFace:SANS, fontSize:13, color:MUTE, isTextBox:true, margin:0 });
-s.addShape(P.ShapeType.line,{x:6.7,y:2.0,w:0,h:2.4,line:{color:RULE,width:1}});
+body(s,0.85,2.65,5.5,'今すぐ収入にしたい方\n言われたとおりにやりたい方\n代わりにやってほしい方',15,INK,30);
+s.addText('自分の言葉を探す講座です。手を動かすのは、ご本人です。\n当てはまる方は、見送ってください。', { x:0.85, y:4.2, w:5.5, h:0.8, fontFace:SANS, fontSize:13, color:MUTE, lineSpacing:22, valign:'top', isTextBox:true, margin:0 });
+s.addShape(P.ShapeType.line,{x:6.7,y:2.0,w:0,h:2.7,line:{color:RULE,width:1}});
 s.addText('お約束しないこと', { x:7.2, y:2.0, w:5.3, h:0.5, fontFace:SERIF, fontSize:22, bold:true, color:ROSE, isTextBox:true, margin:0 });
 body(s,7.2,2.65,5.3,'フォロワーが増えること\n売上が出ること\nお仕事になること',15,INK,30);
-hr(s, 4.75);
-body(s,0.85,4.95,11.7,'何をどう進めるかは、おひとりずつ違います。手順と考え方をお伝えし、続けられる形にするところまでを一緒にやります。',15,INK);
+hr(s, 4.85);
+body(s,0.85,5.05,11.7,'何をどう進めるかは、おひとりずつ違います。手順と考え方をお伝えし、ご自分で続けられる形になるところまでをお手伝いします。手を動かすのは、ご本人です。',15,INK);
 body(s,0.85,5.75,11.7,'出られない回があっても大丈夫です。すべて録画してアーカイブに残します。動画講座の会員サイトも見放題です。',14,MUTE);
 
 /* 23 締め */
