@@ -25,11 +25,11 @@ s.addText('2026年10月期\n3つの講座', { x:0.9, y:1.9, w:6.8, h:1.9, fontFa
 s.addText('好きなファッションを、自分の言葉と、仕事の形に。', { x:0.92, y:3.95, w:6.8, h:0.45, fontFace:SANS, fontSize:16, color:INK, isTextBox:true, margin:0 });
 hr(s, 4.75, 0.9, 6.6);
 s.addText('開講　2026年10月15日（木）21:00\nお申し込み締切　10月14日（水）', { x:0.92, y:4.95, w:6.8, h:0.9, fontFace:SANS, fontSize:15, color:INK, lineSpacing:26, isTextBox:true, margin:0 });
-s.addText('松岡依里子　ファッション心理学者／大学教授', { x:0.92, y:6.3, w:6.8, h:0.4, fontFace:SANS, fontSize:12, color:FAINT, isTextBox:true, margin:0 });
+s.addText('松岡依里子　大学教授／ファッション起業アカデミア主宰', { x:0.92, y:6.3, w:6.8, h:0.4, fontFace:SANS, fontSize:12, color:FAINT, isTextBox:true, margin:0 });
 s.addNotes('自己紹介はここで1分。20代で商社 → 専業主婦 → 大学院で博士号 → 50歳で大学の教壇 → 57歳で教授。いまは大学院でも教えています。');
 
 /* 2 自己紹介 */
-s=P.addSlide(); T(s,'松岡依里子（まつおか えりこ）','ファッション心理学者／大学教授・64歳');
+s=P.addSlide(); T(s,'松岡依里子（まつおか えりこ）','大学教授／ファッション起業アカデミア主宰・64歳');
 s.addImage({ data:MY('04_通り_全身_黒セットアップ_白い帽子.jpg'), x:9.3, y:1.95, w:3.2, h:4.8 });
 body(s,0.85,2.05,8.0,'大学教授（ファッションビジネス研究室）\nFashion Laboratory 代表／ファッション起業アカデミア 主宰\n\nファッション行動を心理学的に分析する研究をしています。\n着こなしのご提案はしていません。「似合うとは何が起きているのか」を研究する立場です。',15,INK,28);
 hr(s, 4.6, 0.85, 8.0);
@@ -170,7 +170,7 @@ s=P.addSlide(); T(s,'この講座は、あなたが主語です','いちばん�
 s.addText('発信の内容も、作る商品も、決めるのはご本人です。', { x:0.85, y:2.0, w:11.7, h:0.45, fontFace:SANS, fontSize:16, bold:true, color:INK, isTextBox:true, margin:0 });
 s.addText('この講座でお渡しするのは、考え方と手順です。そして、ご自分で作られたものを見て、お返事をします。', { x:0.85, y:2.45, w:11.7, h:0.45, fontFace:SANS, fontSize:14, color:MUTE, isTextBox:true, margin:0 });
 s.addText('この講座ですること', { x:0.85, y:3.15, w:5.5, h:0.45, fontFace:SERIF, fontSize:20, bold:true, color:BERRY, isTextBox:true, margin:0 });
-body(s,0.85,3.7,5.5,'講義と対面ワークショップ／教材\n動画講座の会員サイト（開講から1年間）\nご質問へのお返事（48時間以内・受講期間中）\nご自分で作られたものへの助言\n次の一手のご提案',13.5,INK,24);
+body(s,0.85,3.7,5.5,'講義と対面ワークショップ／教材\n動画講座の会員サイト（受講期間中）\nご質問へのお返事（48時間以内・受講期間中）\nご自分で作られたものへの助言\n次の一手のご提案',13.5,INK,24);
 s.addShape(P.ShapeType.line,{x:6.7,y:3.15,w:0,h:2.5,line:{color:RULE,width:1}});
 s.addText('この講座ではしないこと', { x:7.2, y:3.15, w:5.3, h:0.45, fontFace:SERIF, fontSize:20, bold:true, color:ROSE, isTextBox:true, margin:0 });
 body(s,7.2,3.7,5.3,'代わりに市場や競合を調べること\n代わりに事業計画や商品企画を立てること\n代わりに投稿・動画・LP・申込ページを作り続けること\n代わりに販売や営業、お客さま対応をすること\n毎日の行動をひとつずつ指示し続けること',13.5,MUTE,24);
@@ -209,7 +209,7 @@ courses.forEach(c=>{
   s.addShape(P.ShapeType.line,{x:6.5,y:2.25,w:0,h:2.0,line:{color:RULE,width:1}});
   body(s,7.0,2.2,5.5,c.body,14,INK,25);
   hr(s, 4.85);
-  s.addText('全コース共通　質問し放題（48時間以内）／会員サイトとアーカイブは開講から1年間／セルフコーチング／受講生の勉強会／動画撮影会1回',
+  s.addText('全コース共通　質問し放題（48時間以内）／会員サイトとアーカイブ（受講期間中）／セルフコーチング／受講生の勉強会／動画撮影会1回',
     { x:0.85, y:5.05, w:11.7, h:0.5, fontFace:SANS, fontSize:12, color:BERRY, isTextBox:true, margin:0 });
   s.addText('質問し放題は、ご自分の実践についてのご質問にお答えするものです（受講期間中）。制作の代行は含みません。', { x:0.85, y:5.45, w:11.7, h:0.4, fontFace:SANS, fontSize:11, color:FAINT, isTextBox:true, margin:0 });
   s.addText(c.note, { x:0.85, y:5.9, w:11.7, h:0.6, fontFace:SANS, fontSize:15, italic:true, color:MUTE, isTextBox:true, margin:0 });
@@ -276,7 +276,7 @@ s.addText('一緒にインスタライブ／アカウント共有でご紹介', 
 s.addText('アメブロ 2,600名／インスタ 8,500名程度にお届けします。', { x:7.2, y:3.2, w:5.3, h:0.4, fontFace:SANS, fontSize:12, color:MUTE, isTextBox:true, margin:0 });
 hr(s, 3.8, 7.2, 5.3);
 s.addText('こちらは、はじめから全コースに入っています', { x:7.2, y:3.95, w:5.3, h:0.4, fontFace:SANS, fontSize:13, bold:true, color:ROSE, isTextBox:true, margin:0 });
-body(s,7.2,4.4,5.3,'質問し放題（48時間以内・受講期間中）\n動画講座の会員サイトとアーカイブ　開講から1年間 見放題\nセルフコーチング\n受講生の勉強会へご招待（無料の入口の勉強会とは別のものです）\n動画撮影会 1回（丸の内・2時間。撮影は卒業生がお手伝いします）',11.5,MUTE,20);
+body(s,7.2,4.4,5.3,'質問し放題（48時間以内・受講期間中）\n動画講座の会員サイトとアーカイブ　受講期間中 見放題\nセルフコーチング\n受講生の勉強会へご招待（無料の入口の勉強会とは別のものです）\n動画撮影会 1回（丸の内・2時間。撮影は卒業生がお手伝いします）',11.5,MUTE,20);
 
 s.addText('「1回しかない」ではなく「1日で作りきる」日です。', { x:0.85, y:5.9, w:11.7, h:0.5, fontFace:SANS, fontSize:15, color:MUTE, isTextBox:true, margin:0 });
 
@@ -328,7 +328,7 @@ s.addText('お約束しないこと', { x:7.2, y:2.0, w:5.3, h:0.5, fontFace:SER
 body(s,7.2,2.65,5.3,'フォロワーが増えること\n売上が出ること\nお仕事になること',15,INK,30);
 hr(s, 4.85);
 body(s,0.85,5.05,11.7,'何をどう進めるかは、おひとりずつ違います。手順と考え方をお伝えし、ご自分で続けられる形になるところまでをお手伝いします。手を動かすのは、ご本人です。',15,INK);
-body(s,0.85,5.75,11.7,'出られない回があっても大丈夫です。すべて録画してアーカイブに残します。会員サイトとアーカイブは、開講から1年間ご覧いただけます。',14,MUTE);
+body(s,0.85,5.75,11.7,'出られない回があっても大丈夫です。すべて録画して、受講期間中はいつでもご覧いただけます。',14,MUTE);
 
 /* 23 締め */
 s=P.addSlide();
