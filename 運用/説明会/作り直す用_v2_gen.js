@@ -24,7 +24,7 @@ s.addText('ファッション起業アカデミア', { x:0.9, y:1.3, w:6.6, h:0.
 s.addText('2026年10月期\n3つの講座', { x:0.9, y:1.9, w:6.8, h:1.9, fontFace:SERIF, fontSize:44, bold:true, color:BERRY, lineSpacing:56, isTextBox:true, margin:0 });
 s.addText('好きなファッションを、自分の言葉と、仕事の形に。', { x:0.92, y:3.95, w:6.8, h:0.45, fontFace:SANS, fontSize:16, color:INK, isTextBox:true, margin:0 });
 hr(s, 4.75, 0.9, 6.6);
-s.addText('開講　2026年10月15日（木）21:00\nお申し込み締切　10月14日（水）', { x:0.92, y:4.95, w:6.8, h:0.9, fontFace:SANS, fontSize:15, color:INK, lineSpacing:26, isTextBox:true, margin:0 });
+s.addText('開講　2026年10月15日（木）21:00\nお申し込み　随時受付（途中からご参加いただけます）', { x:0.92, y:4.95, w:6.8, h:0.9, fontFace:SANS, fontSize:15, color:INK, lineSpacing:26, isTextBox:true, margin:0 });
 s.addText('松岡依里子　大学教授／ファッション起業アカデミア主宰', { x:0.92, y:6.3, w:6.8, h:0.4, fontFace:SANS, fontSize:12, color:FAINT, isTextBox:true, margin:0 });
 s.addNotes('自己紹介はここで1分。20代で商社 → 専業主婦 → 大学院で博士号 → 50歳で大学の教壇 → 57歳で教授。いまは大学院でも教えています。');
 
@@ -335,7 +335,7 @@ s=P.addSlide();
 s.addImage({ data:MY('05_水玉の柱_全身_黒_白い帽子.jpg'), x:8.9, y:0, w:4.4, h:7.5, sizing:{type:'cover',w:4.4,h:7.5} });
 s.addText('今日、決めなくて大丈夫です。', { x:0.9, y:2.4, w:7.4, h:0.9, fontFace:SERIF, fontSize:38, bold:true, color:BERRY, isTextBox:true, margin:0 });
 hr(s, 3.6, 0.9, 7.4);
-body(s,0.9,3.85,7.4,'合わないと思われたら、見送ってくださってかまいません。\nご質問はいつでも。48時間以内にお返事します。\n\nお申し込みの締切は 10月14日（水）です。',16,INK,30);
+body(s,0.9,3.85,7.4,'合わないと思われたら、見送ってくださってかまいません。\nご質問はいつでも。48時間以内にお返事します。\n\nお申し込みに締切はありません。\n始まってからでも、途中からご参加いただけます。',16,INK,30);
 s.addText('ファッション起業アカデミア　松岡依里子', { x:0.9, y:6.4, w:7.4, h:0.4, fontFace:SANS, fontSize:12, color:FAINT, isTextBox:true, margin:0 });
 s.addNotes('ここで売り込まない。「今日決めなくていい」と必ず口に出す。');
 
